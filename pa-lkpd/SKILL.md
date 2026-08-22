@@ -1,6 +1,9 @@
 ---
 name: pa-lkpd
 description: "Use when a teacher asks to create or revise a student worksheet, activity sheet, practical case, or its assessment rubric. Use approved content and keep the worksheet separate from the lesson plan."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # LKPD (Lembar Kerja Peserta Didik)
@@ -18,6 +21,10 @@ Saat membuat RPP/modul ajar (`pa-rpp`), **minta dulu LKPD resmi gurunya** - LKPD
 7. **Kriteria penguasaan**: A/B/C/D dengan rentang nilai (konfirmasi rentang ke guru; lazim 91-100/80-90/65-79/<64)
 8. **Panduan pengumpulan** (format nama file, kanal pengumpulan)
 
+## Output minimum
+
+LKPD minimum berisi tujuan atau kompetensi, instruksi aktivitas, ruang atau format bukti kerja, dan kriteria penilaian. Studi kasus, materi, rubrik, dan lampiran ditambahkan sesuai kebutuhan. Jangan membuat kasus atau data industri seolah-olah resmi tanpa sumber atau persetujuan guru.
+
 ## Format agar enak dipandang (hasil uji revisi nyata)
 - Paragraf panjang → **bullet/numbered list**
 - Kode/perintah terminal → **block code** (terpisah dari teks penjelasan)
@@ -34,3 +41,6 @@ Saat membuat RPP/modul ajar (`pa-rpp`), **minta dulu LKPD resmi gurunya** - LKPD
 - Σ skor rubrik = 100.
 - Rentang A/B/C/D tidak tumpang-tindih & mencakup 0-100.
 - PDF: tiap halaman >300 chars body (tidak ada halaman sepi), block code tidak terpotong antar halaman.
+- Aktivitas menghasilkan bukti yang dapat dinilai dan selaras dengan tujuan.
+- Instruksi dapat diikuti tanpa penjelasan lisan yang tidak tersedia di dokumen.
+- Data murid atau data mitra yang sensitif tidak masuk contoh publik.

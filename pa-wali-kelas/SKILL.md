@@ -1,11 +1,18 @@
 ---
 name: pa-wali-kelas
 description: "Use when a homeroom teacher asks for a class program, seating plan, attendance or case record, class analysis, or other wali kelas document. Treat all student and case data as sensitive and keep it local."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # Wali Kelas (Homeroom Module)
 
 Semua output simpan di folder output profil; data murid = sensitif (aturan #9 `pa-core`). Minta template resmi sekolah dulu untuk tiap dokumen.
+
+## Output minimum
+
+Buat satu dokumen yang diminta saja. Pisahkan dokumen identitas, presensi, denah, program kerja, kasus, dan analisis agar akses data dapat dibatasi.
 
 ## 1. Data Siswa Kelas
 Tabel identitas: No | Nama | NIS/NISN | JK | TTL | Orang Tua/Wali | Kontak | Alamat.
@@ -39,3 +46,11 @@ Dari leger (`pa-admin`) + KKTP (`pa-kktp`): persentase tuntas per TP/mapel, daft
 ## Pitfall
 - Jangan taruh nilai rinci murid di dokumen publik kelas (denah duduk, piket) - hanya administratif.
 - Analisis kenaikan mengikuti kriteria resmi dinas (KKM/batas tuntas sekolah), konfirmasi angkanya dulu.
+
+## Verifikasi
+
+- Sumber daftar siswa adalah data resmi dan tidak memiliki duplikat.
+- Jumlah piket, presensi, dan persentase dihitung ulang.
+- Catatan kasus menggunakan fakta, tanggal, tindakan, dan status tanpa label yang menghakimi.
+- Dokumen publik kelas tidak memuat nilai rinci, kontak, alamat, atau catatan kasus.
+- Analisis kenaikan menggunakan kriteria resmi yang sudah dikonfirmasi.

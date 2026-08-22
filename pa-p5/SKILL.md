@@ -1,11 +1,14 @@
 ---
 name: pa-p5
 description: "Use when a teacher asks for a P5 project document, project module, facilitator journal, reflection sheet, or project report. Check whether the school uses P5 terminology or a newer cocurricular format."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # P5 - Projek Penguatan Profil Pelajar Pancasila
 
-Dokumen wajib Kurikulum Merdeka yang paling sering bikin guru pusing karena strukturnya beda dari perangkat ajar biasa. Skill ini menghasilkan: **modul projek**, **jurnal fasilitasi**, **lembar refleksi** (guru & murid), dan **rapor projek**.
+Skill ini menghasilkan dokumen projek atau kokurikuler sesuai format sekolah: **modul projek**, **jurnal fasilitasi**, **lembar refleksi**, dan **rapor projek**. Jangan menyebut satu format sebagai dokumen wajib untuk semua sekolah.
 
 ## LANGKAH 0 - Cek dulu (pitfall #1)
 1. Minta **template modul projek & format rapor projek resmi sekolah** dulu - tiap sekolah/dinas punya varian (perintah download di `pa-core`).
@@ -17,6 +20,10 @@ Dokumen wajib Kurikulum Merdeka yang paling sering bikin guru pusing karena stru
 - Kelompok kelas/fase + jumlah murid
 - Alokasi waktu (jumlah pertemuan × menit)
 - Tim pengampu (nama + peran)
+
+## Output minimum
+
+Buat hanya modul, jurnal, refleksi, atau rapor yang diminta. Tujuan projek, aktivitas, produk, dan asesmen harus dapat ditelusuri ke konteks sekolah dan dimensi atau profil yang dipilih.
 
 ## 7 Tema P5
 Kearifan Lokal · Bangunlah Jiwa dan Raganya · Gaya Hidup Berkelanjutan · Bhinneka Tunggal Ika · Suara Demokrasi · Rekayasa dan Teknologi · Kewirausahaan dan Ekonomi Kreatif
@@ -64,3 +71,11 @@ MD → HTML → PDF via pipeline `pa-core`. Blok tanda tangan: Kepala Sekolah | 
 - Tujuan projek ≠ tujuan mapel: tulis perilaku teramati ("murid mampu berkolaborasi dalam..."), bukan materi pelajaran
 - Rubrik 4 level harus punya deskripsi beda-tajam antarlevel (level 1 vs level 2 harus jelas bedanya) - pakai pola rubrik `pa-lkpd`
 - Raport projek sering minta per-elemen, bukan per-dimensi - cek template sekolah sebelum generate massal
+
+## Verifikasi
+
+- Istilah P5, kokurikuler, dan Profil Lulusan sesuai kebijakan sekolah.
+- Alokasi waktu berasal dari KOSP atau dokumen resmi sekolah.
+- Rubrik memiliki bukti perilaku atau produk yang dapat diamati.
+- Rapor hanya dibuat dari jurnal atau bukti projek yang tersedia.
+- Mapping nama murid diperiksa ulang dan data lengkap tetap lokal.

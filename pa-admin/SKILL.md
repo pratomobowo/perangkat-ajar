@@ -1,6 +1,9 @@
 ---
 name: pa-admin
 description: "Use when a teacher asks for a teaching journal, attendance list, class ledger, or other routine classroom administration. Check the school's policy and existing application before creating duplicate documents."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # Admin Mengajar Harian
@@ -9,6 +12,10 @@ description: "Use when a teacher asks for a teaching journal, attendance list, c
 Tanya guru/sekolah:
 1. "Sekolah masih minta jurnal manual?" - arah nasional menyederhanakan admin guru; banyak sekolah sudah lewat aplikasi.
 2. Kalau sekolah punya format resmi (Excel/PDF), pakai ITU - skill ini hanya membantu mengisi/menghasilkan datanya.
+
+## Output minimum
+
+Buat hanya jurnal, presensi, atau leger yang diminta dan belum disediakan aplikasi sekolah. Jangan menduplikasi sistem sekolah.
 
 ## 1. Jurnal Mengajar
 Per bulan per kelas: Tanggal | Jam ke | Kelas | Materi/Kegiatan (dari Prosem!) | Hadir | Ket.
@@ -29,3 +36,10 @@ Tabel: No | Nama | nilai per TP | Rata-rata | Predikat (interval KKTP `pa-kktp`)
 - Data murid sensitif (aturan #9 `pa-core`) - simpan lokal, kirim hanya ke guru pemiliknya.
 - Jangan bikin versi manual kalau sekolah sudah digital - itu pekerjaan dobel.
 - Bulan baru = file/baris baru, arsip bulan lama jangan ditumpuk.
+
+## Verifikasi
+
+- Jumlah baris, nama, NIS, dan tanggal cocok dengan sumber sekolah.
+- Rekap kehadiran dan nilai dihitung dari data, bukan diketik manual.
+- Dokumen lama tidak tertimpa; versi baru diberi periode yang jelas.
+- Data lengkap tetap lokal dan tidak masuk preview umum.

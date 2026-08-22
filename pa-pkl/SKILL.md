@@ -1,17 +1,22 @@
 ---
 name: pa-pkl
 description: "Use when an SMK teacher asks for a PKL or Prakerin learning document, student journal, supervisor instrument, DU/DI assessment, or grade conversion. Exclude official correspondence unless separately requested."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # PKL - Praktik Kerja Lapangan (SMK)
 
-PKL adalah mata pelajaran wajib SMK (SN-Dikmen). Skill ini membuat dokumen **sisi pembelajaran**: pedoman, jurnal, penilaian, konversi nilai. (Surat pengantar/moU = urusan tata usaha; buat manual atau lewat format sekolah.)
+Skill ini membuat dokumen **sisi pembelajaran PKL**: pedoman, jurnal, penilaian, dan konversi nilai. Status, durasi, dan administrasi PKL mengikuti panduan serta kebijakan sekolah terbaru.
 
 ## LANGKAH 0 - Cek kebijakan sekolah dulu
 1. Minta **Pedoman/Petunjuk Pelaksanaan PKL resmi sekolah** + format penilaian yang dipakai (perintah download di `pa-core`). Tiap sekolah beda bobot & durasi.
 2. Data dasar: jurusan/konsentrasi keahlian · kelas yang melaksanakan · durasi (umum 3-6 bulan) · periode · jumlah siswa & sebaran industri.
 
 ## Dokumen yang bisa dibuat
+
+Buat hanya dokumen yang diminta. Surat pengantar, MoU, dan administrasi kerja sama berada di luar cakupan kecuali sekolah meminta formatnya.
 
 ### 1. Pedoman Pelaksanaan PKL (buku panduan siswa)
 Struktur standar: dasar hukum/kebijakan sekolah → tujuan → peserta & syarat → tempat pelaksanaan → hak & kewajiban siswa/pembimbing → jadwal & tahapan (persiapan-pelaksanaan-laporan) → mekanisme bimbingan → sistem penilaian (+ bobot) → tata cara laporan → penghargaan/sanksi.
@@ -46,3 +51,11 @@ Semua MD → HTML → PDF via pipeline `pa-core`. Instrumen penilaian & jurnal c
 - Jangan generate penilaian atas nama pembimbing DU/DI - instrumen yang dibuat itu KOSONG untuk diisi mereka; yang boleh diolah hanya data yang sudah diisi & difoto/diketik guru
 - Laporan siswa jangan ditulis-hasilkan utuh untuk murid (plagiarisme & tidak mengajar); buatkan outline + checklist kelengkapan + feedback atas draft murid
 - Satu murid satu industri ≠ satu pembimbing sekolah - cek pembagian bimbingan sebelum bikin rekap
+
+## Verifikasi
+
+- Data siswa, industri, pembimbing, periode, dan kompetensi cocok dengan daftar resmi.
+- Bobot penilaian berasal dari pedoman sekolah dan totalnya 100%.
+- Instrumen DU/DI tetap kosong untuk diisi penilai yang berwenang.
+- Konversi nilai dapat direkonsiliasi dari komponen mentah.
+- Dokumen siswa tidak dibuat utuh untuk menggantikan pekerjaan reflektif siswa.

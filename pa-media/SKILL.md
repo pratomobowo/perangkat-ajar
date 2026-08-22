@@ -1,12 +1,19 @@
 ---
 name: pa-media
 description: "Use when a teacher asks to turn approved learning content into teaching materials, slides, a handout, or classroom presentation. Do not use this skill for web research or worksheet design."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # Materi Ajar & Media Belajar
 
 ## Prasyarat
 - TP + materi pokok dari ATP/Prota (`pa-atp`); LKPD resmi guru sebagai sumber konten bila ada.
+
+## Output minimum
+
+Pilih satu output yang diminta: materi bacaan, slide, handout, atau bank pertanyaan. Jangan membuat semua format sekaligus. Konten harus sudah disetujui atau memiliki sumber yang dapat diverifikasi; riset dilakukan oleh `pa-riset`.
 
 ## 1. Materi Pembelajaran (bahan bacaan siswa/guru)
 Struktur ringkas per TP:
@@ -34,3 +41,11 @@ Nexie tidak memainkan platform eksternal - yang dibuat adalah **bank pertanyaann
 - Jangan tempel teks panjang ke slide; itu tugas materi bacaan (#1), slide hanya kerangka bicara.
 - Gambar/grafik: pakai data nyata dari studi kasus, bukan ilustrasi acak.
 - PPTX hasil python-pptx selalu dicek dibuka ulang (jumlah slide + judul) sebelum dikirim.
+
+## Verifikasi
+
+- Setiap materi atau slide memiliki tujuan dan target kelas.
+- Sumber dan tanggal materi tercatat bila konten mudah berubah.
+- Slide dapat dibaca dari jarak kelas dan tidak memuat paragraf panjang.
+- PPTX dapat dibuka ulang; jumlah slide dan judul sesuai outline.
+- Jika dependensi tidak tersedia, laporkan file yang belum dapat diverifikasi.

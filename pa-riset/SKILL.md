@@ -1,11 +1,14 @@
 ---
 name: pa-riset
 description: "Use when a teacher asks to find and verify web sources for a topic, learning objective, teaching material, case, or assessment context. Return sourced research for another skill to transform."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # Riset Materi → Bahan Ajar
 
-Guru: *"cariin materi X"*, *"ada nggak referensi Y"*, *"bikinin bahan ajar tentang Z"* → skill ini mencari, memverifikasi, merangkum, dan menghasilkan dokumen bahan ajar.
+Guru: *"cariin materi X"*, *"ada nggak referensi Y"*, atau *"bikinin bahan ajar tentang Z"*. Skill ini mencari dan memverifikasi sumber. Transformasi menjadi bahan ajar, slide, LKPD, atau soal dilakukan oleh skill tujuan setelah guru menyetujui hasil riset.
 
 ## LANGKAH 0 - Pakai tool pencarian yang ADA di Hermes guru
 - Prioritas: tool web-search bawaan Hermes → kalau host punya SearXNG lokal (`http://127.0.0.1:8080/search?q=<query>&format=json`) pakai itu → terakhir fallback browser.
@@ -33,6 +36,14 @@ Ringkasan: ...
 ⚠️ Yang belum terverifikasi: ...
 Lanjut dibuatkan: materi lengkap / slide / studi kasus LKPD?
 ```
+
+## Verifikasi
+
+- Setiap klaim penting memiliki URL sumber.
+- Sumber resmi dipisahkan dari sumber akademik, praktisi, dan opini.
+- Fakta yang hanya punya satu sumber diberi label belum terverifikasi.
+- Tanggal dan versi sumber dicatat untuk topik yang mudah berubah.
+- Tidak menyalin artikel mentah dan tidak membuat klaim di luar isi sumber.
 
 ## Pitfall
 - Situs menolak curl polos (406/bot-check) → ulangi dengan UA browser: `curl -sL -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' '<url>' --max-time 25`. Situs pemerintah umumnya lolos; komersial tertentu tetap blok → pakai snippet hasil pencarian sebagai gantinya.

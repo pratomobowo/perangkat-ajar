@@ -1,6 +1,9 @@
 ---
 name: pa-soal
 description: "Use when a teacher asks for diagnostic tests, practice questions, blueprints, SAS instruments, TKA-style items, remedial or enrichment assessments, or post-test item analysis. Confirm assessment rules before drafting."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # Soal & Asesmen (Latihan · Kisi-kisi · SAS · Remedial)
@@ -8,6 +11,10 @@ description: "Use when a teacher asks for diagnostic tests, practice questions, 
 ## Prasyarat
 - Daftar TP + alokasi JP (Prota) + materi per pertemuan (RPP/LKPD).
 - **Konfirmasi dulu ke guru** (aturan #2 & #7 `pa-core`): jumlah soal, komposisi tingkat kesulitan, batas tuntas. Jangan menyusun sebelum angka disetujui.
+
+## Output minimum
+
+Buat hanya instrumen yang diminta: diagnostik, formatif, sumatif, remedial, pengayaan, kisi-kisi, atau analisis butir. Jangan otomatis membuat semua jenis asesmen. Setiap instrumen harus terhubung ke TP, bukti belajar, dan KKTP.
 
 ## Komposisi default (selalu konfirmasi - angka harus menjumlah 100%)
 - **Latihan per TP**: 10% mudah / 50% sedang / 40% susah, urut mudah → susah.
@@ -42,6 +49,8 @@ python3 scripts/verify_soal.py naskah.md --kunci-in-naskah --jumlah 50 \
 ```
 Script mengecek: nomor 1..N lengkap, kunci lengkap + distribusi A-D, (bila ada kisi) komposisi level = target & tiap TP ≥1 L1 & pembahasan mencakup semua L3. Setelah PDF jadi: pymupdf cek "KUNCI JAWABAN" hanya di halaman terakhir, halaman 1 bebas kata "Kunci:", nomor soal dicek regex `^N\.` pada teks (di MD formatnya `**N.**`, di PDF asterisk hilang - jangan grep literal).
 
+Jika script atau dependensi tidak tersedia, tandai verifikasi sebagai belum dijalankan. Jangan mengklaim soal sudah tervalidasi.
+
 ## Asesmen Diagnostik (awal semester / awal TP)
 Input untuk kolom "Identifikasi Murid" di PPM (`pa-rpp`). Dua bagian:
 1. **Non-kognitif**: minat, motivasi, gaya/persiapan belajar - 8-15 pertanyaan skala/pilihan singkat.
@@ -72,3 +81,10 @@ Laporkan rekap: jumlah butir baik/cukup/jelek/gagal + daftar butir untuk direvis
 - f-string Python vs kurung kurawal materi (`{X, Y}`) → NameError saat render; pakai placeholder + `.replace()`.
 - Soal menguji **baris program/konsep** untuk mapel praktik (bukan hafalan definisi) bila guru minta level HOTS.
 - Cek keseimbangan kunci WAJIB menyertakan huruf bernilai 0 (hitung `dist.get(h,0) for h in "ABCD"` sebelum min/max). Bug nyata v1.0 `verify_soal.py`: kunci 30×A dianggap "seimbang" karena min/max hanya dihitung atas huruf yang muncul (30/30 → selisih 0).
+
+## Verifikasi lintas asesmen
+
+- Setiap butir memiliki TP atau indikator yang jelas.
+- Bentuk asesmen sesuai kompetensi yang diukur; praktik tidak dipaksa menjadi pilihan ganda.
+- Diagnostik tidak dimasukkan sebagai nilai rapor tanpa kebijakan eksplisit.
+- Remedial merespons kesulitan yang ditemukan, bukan sekadar mengulang naskah lama.
