@@ -1,12 +1,14 @@
 # Perangkat Ajar
 
-### Skill AI untuk membantu guru menyiapkan pembelajaran yang lebih bermakna
+### Perangkat ajar yang lebih mudah disiapkan
 
-`perangkat-ajar` adalah keluarga skill untuk Hermes Agent yang membantu guru Indonesia menyusun, mengembangkan, dan memeriksa perangkat ajar—dari analisis Capaian Pembelajaran hingga asesmen, pengolahan nilai, dan deskripsi rapor.
+Guru menghabiskan banyak waktu untuk menyusun dokumen, menghitung alokasi, memeriksa nilai, dan menyesuaikan format sekolah. Proyek ini membantu meringankan pekerjaan tersebut.
 
-Proyek ini dibuat untuk satu tujuan sederhana: **mengurangi pekerjaan administratif tanpa mengurangi peran profesional guru.**
+`perangkat-ajar` menyediakan alat bantu untuk menyusun perangkat ajar secara lebih teratur, mulai dari Capaian Pembelajaran, tujuan pembelajaran, dan rencana pembelajaran hingga asesmen, pengolahan nilai, dan deskripsi rapor.
 
-AI membantu merapikan alur, menghitung, memeriksa konsistensi, dan menyiapkan draf. Guru tetap menentukan tujuan, strategi, penilaian, dan keputusan yang sesuai dengan murid serta kebijakan sekolah.
+Tujuannya sederhana: **mengurangi beban administratif agar guru dapat lebih fokus pada proses belajar murid.**
+
+AI membantu membuat draf, merapikan alur, menghitung, dan memeriksa konsistensi. Guru tetap menentukan tujuan, strategi, penilaian, dan keputusan yang sesuai dengan murid serta kebijakan sekolah.
 
 ## Mengapa proyek ini dibuat?
 
@@ -18,11 +20,11 @@ Menyusun perangkat ajar sering berarti menghubungkan banyak dokumen, angka, dan 
 - Nilai harus diolah secara konsisten dan dapat dijelaskan.
 - Format akhir harus mengikuti kebutuhan satuan pendidikan.
 
-Keluarga skill ini membantu menghubungkan pekerjaan tersebut dalam satu alur yang fleksibel—tanpa memaksa semua guru memakai format yang sama.
+Proyek ini membantu menghubungkan pekerjaan tersebut dalam satu alur yang fleksibel. Setiap sekolah tetap dapat menggunakan format dan kebijakannya sendiri.
 
 ## Prinsip utama
 
-- **Guru memegang kendali.** AI menyusun dan memeriksa; guru mengambil keputusan.
+- **Guru memegang kendali.** AI menyusun dan memeriksa. Guru mengambil keputusan.
 - **Konteks sekolah menjadi rujukan.** Format resmi, kalender pendidikan, dan kebijakan sekolah didahulukan daripada template generik.
 - **Mulai dari kebutuhan nyata.** Guru dapat membuat ATP, modul ajar, soal, atau dokumen lain tanpa harus memulai dari awal.
 - **Konsistensi dapat diverifikasi.** Alokasi JP, komposisi soal, nomor jawaban, dan hasil PDF dibantu pemeriksa otomatis.
@@ -88,7 +90,7 @@ Verifikasi: jalankan `hermes` lalu cek `skills_list` memuat skill `pa-*`.
 ## Mulai cepat
 
 1. Bilang ke agent-mu: *"Bantu aku bikin perangkat ajar"* → agent melakukan intake profil (nama, sekolah, mapel, JP/minggu, tahun pelajaran, minggu efektif dari kalender resmi) dan menyimpannya di `~/.hermes/perangkat-ajar/profil.yaml`.
-2. Sebutkan dokumen mana yang mau dibuat — mulai dari mana saja (guru sering sudah punya sebagian): *"Bikin ATP"* / *"Susun prosem"* / *"Buatkan modul ajar TP1"*.
+2. Sebutkan dokumen mana yang mau dibuat - mulai dari mana saja (guru sering sudah punya sebagian): *"Bikin ATP"* / *"Susun prosem"* / *"Buatkan modul ajar TP1"*.
 3. Semua dokumen tersimpan `.md` + `.pdf` di `~/.hermes/perangkat-ajar/output/<paket>/`; revisi cukup edit `.md` lalu minta regenerate.
 
 ## Filosofi desain
@@ -96,6 +98,6 @@ Verifikasi: jalankan `hermes` lalu cek `skills_list` memuat skill `pa-*`.
 - **Hulu → hilir**: CP dianalisis → ATP → Prota → Prosem → KKTP → RPP/Modul Ajar → LKPD → Soal/Asesmen. Guru boleh masuk di titik mana pun.
 - **Data ≠ proses**: semua data spesifik guru/sekolah hidup di `profil.yaml` + dokumen sumber guru; skill hanya berisi proses. Satu keluarga skill melayani semua guru.
 - **Template dulu**: dokumen mengikuti format resmi sekolah masing-masing, bukan format bawaan skill.
-- **Terprogram**: setiap dokumen diverifikasi otomatis (pymupdf + `verify_soal.py`) — bukan dicek dengan mata.
+- **Terprogram**: setiap dokumen diverifikasi otomatis (pymupdf + `verify_soal.py`) - bukan dicek dengan mata.
 
 Dikembangkan dari kebutuhan nyata guru dan terus disempurnakan melalui penggunaan serta masukan komunitas.
