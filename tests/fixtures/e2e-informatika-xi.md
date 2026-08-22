@@ -11,7 +11,8 @@ Data ini sintetis untuk pengujian. Bukan dokumen resmi sekolah.
 - JP per minggu: 4
 - Durasi 1 JP: 45 menit
 - Minggu efektif semester ganjil: 18
-- Format sekolah: belum tersedia, gunakan mode ringkas dan tandai sebagai draf
+- Format sekolah: format ringkas sintetis disepakati untuk pengujian
+- KKTP uji: TP1 dan TP2 menggunakan interval deskriptif yang disepakati di bawah
 
 ## CP sintetis
 
@@ -24,6 +25,28 @@ Gunakan satu unit kecil agar alur cepat:
 - TP1: Peserta didik mampu menjelaskan entitas, atribut, relasi, dan kunci utama pada kasus data perpustakaan.
 - TP2: Peserta didik mampu merancang skema tabel relasional sederhana dari kasus data perpustakaan.
 - Total unit: 8 JP dalam 2 pertemuan.
+
+## Kalender sintetis untuk Prosem
+
+Semester ganjil memiliki 18 minggu efektif:
+
+| Bulan | Minggu efektif | Kegiatan unit |
+| --- | ---: | --- |
+| Juli | 3 | TP1 minggu 1-2, TP2 mulai minggu 3 |
+| Agustus | 4 | TP2 |
+| September | 4 | TP2 dan latihan |
+| Oktober | 3 | asesmen unit dan penguatan |
+| November | 2 | unit lain |
+| Desember | 2 | unit lain dan penutup semester |
+
+Unit uji memakai Juli minggu 1-3 dan Agustus minggu 1-2. Total alokasi unit tetap 8 JP.
+
+## KKTP uji yang disepakati
+
+- TP1 tercapai jika murid mengidentifikasi entitas, atribut, relasi, dan kunci utama dengan benar pada kasus perpustakaan.
+- TP2 tercapai jika murid menghasilkan skema tabel dengan tabel relevan, kunci utama, dan hubungan antartabel yang konsisten.
+- Predikat uji: Belum tercapai, Tercapai, Tercapai dengan penguasaan kuat.
+- Pemetaan skor uji: 0-69 Belum tercapai, 70-89 Tercapai, 90-100 Tercapai dengan penguasaan kuat.
 
 ## Kesepakatan pengujian
 
@@ -63,15 +86,15 @@ TKA, P5, PKL, admin, dan wali kelas tidak termasuk uji ini.
 
 | Tahap | Status | Temuan |
 | --- | --- | --- |
-| CP -> TP | Belum diuji | |
-| TP -> ATP | Belum diuji | |
-| ATP -> Prota | Belum diuji | |
-| Prota -> Prosem | Belum diuji | |
-| TP -> KKTP | Belum diuji | |
-| KKTP -> Rencana | Belum diuji | |
-| Rencana -> LKPD/asesmen | Belum diuji | |
-| Nilai -> Rapor | Lulus terbatas | Mapping siswa dan TP benar; kata evaluatif tanpa interval KKTP menjadi catatan |
-| Gate lintas dokumen | Lulus terbatas | Alur dan angka konsisten; rapor final tertahan sampai KKTP resmi tersedia |
+| CP -> TP | Lulus | TP1 dan TP2 konsisten dengan CP sintetis |
+| TP -> ATP | Lulus | Urutan konsep ke rancangan, tanpa TP tambahan |
+| ATP -> Prota | Lulus | TP lengkap, alokasi unit 8 JP |
+| Prota -> Prosem | Lulus | 18 minggu, 8 JP, semua bulan dan penempatan unit konsisten |
+| TP -> KKTP | Lulus | Kriteria dan interval uji disepakati |
+| KKTP -> Rencana | Lulus | Tujuan, kegiatan, dan bukti asesmen terhubung |
+| Rencana -> LKPD/asesmen | Lulus | Asesmen mengukur TP1 dan TP2 |
+| Nilai -> Rapor | Lulus | Predikat mengikuti KKTP dan mapping siswa benar |
+| Gate lintas dokumen | Lulus | Semua gate uji terpenuhi pada fixture sintetis |
 
 ## Kriteria akhir
 

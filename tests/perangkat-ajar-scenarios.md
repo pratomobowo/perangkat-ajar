@@ -137,3 +137,5 @@ Jika skenario gagal, ubah skill yang menyebabkan kegagalan, jalankan ulang skena
 ## Hasil uji 2026-08-22
 
 Skenario 1 sampai 3 menghasilkan intake yang sesuai harapan. Skenario 7 pertama timeout setelah 180 detik. Setelah diberi fast path, respons menjadi cepat, tetapi Hermes sempat memilih interpretasi sendiri. Aturan kemudian diperketat: konflik dengan lebih dari satu interpretasi wajib menghasilkan pertanyaan pilihan dan tidak boleh dilanjutkan sebelum guru memilih. Uji terakhir lulus dengan respons singkat dan berhenti sesuai format.
+
+Uji E2E penuh menggunakan fixture sintetis berhasil lulus. Lihat `tests/e2e-report-2026-08-22.md`.
