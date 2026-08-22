@@ -74,6 +74,53 @@ Pastikan `~/.hermes/perangkat-ajar/profil.yaml` ada. Kalau belum, tanya santai (
 
 Simpan ke `~/.hermes/perangkat-ajar/profil.yaml` (salin `templates/profil.yaml`). Sesi berikutnya jangan tanya ulang.
 
+## LANGKAH 2: Vault Markdown sebagai sumber kerja
+
+Jika guru menyimpan administrasi di vault Markdown, gunakan skill `obsidian` untuk membaca, mencari, membuat, dan mengedit note. Jangan membuat vault baru tanpa lokasi yang diketahui dan persetujuan guru.
+
+1. Cek `OBSIDIAN_VAULT_PATH` dari `/var/hermes-home/.env`.
+2. Jika kosong, tanyakan lokasi vault. Jangan membuat folder fallback otomatis.
+3. Tanyakan apakah guru ingin membuat struktur `Perangkat-Ajar`.
+4. Jika disetujui, buat folder yang belum ada dan pertahankan note lain.
+
+Struktur standar:
+
+```text
+Perangkat-Ajar/
+├── 00-Index/
+├── 01-Sumber-Resmi/{CP,Kalender-Pendidikan,Panduan-Kebijakan,Template-Sekolah}/
+├── 02-Analisis/{Analisis-CP,Tujuan-Pembelajaran,KKTP}/
+├── 03-Perencanaan/{ATP,Prota,Prosem,RPP-Modul-PPM}/
+├── 04-Pembelajaran/{Materi,Media,LKPD,Jobsheet}/
+├── 05-Asesmen/{Diagnostik,Formatif,Sumatif,Remedial,Pengayaan}/
+├── 06-Nilai-Rapor/{Data-Nilai,Olah-Nilai,Deskripsi-Rapor}/
+├── 07-Projek-PKL/{P5-Kokurikuler,PKL}/
+├── 08-Wali-Kelas/
+└── 99-Arsip/
+```
+
+Setiap note memiliki frontmatter minimum:
+
+```yaml
+---
+jenis: analisis-cp
+mapel: Informatika
+fase: F
+kelas: XI
+semester: ganjil
+tahun_pelajaran: 2026/2027
+status: draft
+versi: 1
+sumber: []
+tp: []
+tags: [perangkat-ajar]
+---
+```
+
+`status` harus `draft`, `perlu-review`, `disetujui`, `digunakan`, atau `diarsipkan`. Note draft tidak boleh menjadi sumber final tanpa persetujuan guru. Gunakan wikilink seperti `[[Analisis CP Informatika Fase F]]`. Revisi membuat versi baru atau memindahkan versi lama ke `99-Arsip/`, bukan menghapusnya. Markdown adalah sumber utama; PDF, DOCX, XLSX, dan PPTX adalah output turunan.
+
+Sebelum membuat note, cari note dengan jenis, mapel, fase, kelas, dan tahun yang sama agar tidak duplikat. Sebelum membuat dokumen turunan, baca sumber berstatus `disetujui` atau `digunakan`. Setelah menulis, baca ulang path, frontmatter, status, wikilink, dan isi note. Data nilai, presensi, kasus, kontak, dan deskripsi rapor tetap lokal serta dimasking pada preview chat.
+
 ## Routing
 
 Muat hanya skill yang diperlukan. Batas fungsi penting:
