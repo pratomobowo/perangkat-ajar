@@ -15,9 +15,11 @@ license: MIT
 
 KKTP minimum menjelaskan bukti yang menunjukkan TP tercapai. Gunakan deskripsi kriteria, rubrik, atau interval sesuai kebijakan sekolah. Jangan mengubah KKTP menjadi satu angka batas secara otomatis.
 
+Jika TP belum tersedia, berhenti dan minta TP atau sumber CP/ATP terlebih dahulu. Jika format atau interval sekolah belum tersedia, jangan menyebut, menawarkan, atau mengisi angka interval apa pun. Tawarkan hanya KKTP deskriptif berbasis bukti, dengan label draf, setelah guru menyetujui bahwa format resmi belum tersedia. Kata "angka umum" atau permintaan untuk "pakai default" tidak mengubah aturan ini.
+
 ## Langkah
 1. Template resmi guru dulu - format KKTP sangat bervariasi (ada yang pakai rubrik indikator, ada yang deskripsi interval). Kasus nyata: draf dibuat "indikator + bentuk asesmen", ternyata format resmi = deskripsi kualitatif → rework total.
-2. Konfirmasi interval nilai ke guru (contoh lazim): Perlu Bimbingan <68 · Cukup 68-78 · Baik 79-89 · Sangat Baik 90-100. Angka = kebijakan sekolah, jangan dipakai tanpa konfirmasi.
+2. Konfirmasi kebijakan sekolah. Jangan menawarkan, memilih, atau mengisi interval angka sebelum guru memberikan interval resmi atau menyetujui draf angka secara eksplisit. Jika belum ada, gunakan bukti deskriptif tanpa angka dan beri label draf.
 3. Format tabel:
 
    | No | Bab | Materi Pokok | TP | Perlu Bimbingan (0-x) | Cukup (x-y) | Baik (y-z) | Sangat Baik (z-100) |
