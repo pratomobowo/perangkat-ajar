@@ -1,0 +1,23 @@
+# Profil guru — Perangkat Ajar (pa-core)
+# Diisi saat intake pertama. Edit langsung saat ada perubahan.
+# Satu blok "paket" per mapel/kelas yang diampu.
+
+guru:
+  nama: ""
+  nip: ""              # kosongkan bila tidak ingin dicantumkan
+  sekolah: ""
+  jenjang: ""          # SD / SMP / SMA / SMK
+  kurikulum: "Merdeka"
+
+paket:
+  - id: ""             # slug unik, mis. basis-data-xi → dipakai sebagai nama folder output
+    mapel: ""
+    fase: ""           # A (SD kls 1-2) s.d. F (SMA/SMK kls 11-12)
+    kelas: ""
+    jp_per_minggu: 0
+    menit_per_jp: 45   # cek kebijakan sekolah; umumnya 40 atau 45
+    tahun_pelajaran: ""  # mis. 2026/2027
+    minggu_efektif:    # WAJIB dari kalender pendidikan resmi sekolah — jangan menebak
+      ganjil: 0
+      genap: 0
+    catatan: ""
