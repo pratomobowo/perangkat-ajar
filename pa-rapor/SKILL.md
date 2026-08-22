@@ -1,6 +1,9 @@
 ---
 name: pa-rapor
 description: "Use when a teacher asks to generate or review student report descriptions from criteria and scores. Verify student identity and keep the output private."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # Deskripsi Capaian Kompetensi (Kalimat Rapor)
@@ -8,6 +11,10 @@ description: "Use when a teacher asks to generate or review student report descr
 ## Prasyarat
 - KKTP (`pa-kktp`): deskripsi interval per TP.
 - Daftar nilai siswa per TP (export e-Rapor / rekap guru). Kalau belum ada nilai → tanya dulu; JANGAN mengarang angka.
+
+## Output minimum
+
+Output minimum adalah deskripsi per siswa yang bersumber dari capaian TP dan format rapor sekolah. Jangan membuat predikat, bobot, atau narasi jika sumbernya belum tersedia.
 
 ## Langkah
 1. **Konfirmasi sumber & bobot**: nilai rapor = gabungan formatif+sumatif? Bobotnya? Ikuti kebijakan sekolah/e-Rapor.
@@ -29,3 +36,10 @@ description: "Use when a teacher asks to generate or review student report descr
 - Copy-paste generik ganti nama saja → langsung ketahuan guru/ortu; variasikan berdasarkan nilai per TP yang membedakan mereka.
 - Kalimat untuk "Perlu Bimbingan" tetap hormat & konstruktif (aturan #9 `pa-core`: data sensitif).
 - e-Rapor punya batas karakter kolom - cek dulu panjang maksimalnya.
+
+## Verifikasi output
+
+- Jumlah output sama dengan jumlah siswa yang disetujui.
+- Mapping NIS, nama, capaian, dan deskripsi diperiksa ulang.
+- Setiap deskripsi menyebut bukti atau TP yang benar-benar ada di input.
+- Panjang dan gaya sesuai batas e-Rapor atau format sekolah.

@@ -1,12 +1,19 @@
 ---
 name: pa-prosem
 description: "Use when a teacher asks to distribute learning objectives or topics across weeks and months in one semester. Require the annual plan and official school calendar before calculating the matrix."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # Prosem (Program Semestre)
 
 ## Prasyarat
 - Prota (`pa-prota`) + rekap kalender per bulan (jumlah minggu efektif tiap bulan) yang sudah diverifikasi saat menyusun Prota.
+
+## Output minimum
+
+Prosem memetakan TP atau unit belajar ke waktu dalam satu semester. Matriks landscape dan baris kegiatan sekolah hanya dibuat jika format sekolah memerlukannya.
 
 ## Langkah
 1. Template resmi guru dulu - format Prosem paling bervariasi antar sekolah (matriks minggu vs tabel bulanan). Ikuti yang resmi.
@@ -40,6 +47,7 @@ assert all(b in text for b in ["Juli","Agustus","September","Oktober","November"
 ```
 - Cek orientasi halaman 1: `doc[0].rect.width > doc[0].rect.height`.
 - Jumlah pertemuan & JP per TP = Prota (audit silang).
+- Total minggu efektif pada matriks = rekap kalender yang disetujui.
 
 ## Pitfall
 - Menambah kolom baru → update SEMUA `colspan`.

@@ -1,6 +1,9 @@
 ---
 name: pa-analisis-cp
 description: "Use when a teacher asks to analyze an official Capaian Pembelajaran and derive learning objectives per element or phase. Require the source CP before drafting."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # Analisis CP
@@ -9,6 +12,10 @@ description: "Use when a teacher asks to analyze an official Capaian Pembelajara
 - Profil guru ada (skill `pa-core`).
 - **Dokumen CP resmi** mapel & fase terkait - minta dari guru atau file/teksnya. JANGAN mengarang/mengingat CP dari kepala; versi CP berbeda antar tahun.
 - Untuk SMK: tanya apakah sekolah punya **CP hasil sinkronisasi industri/DUDI** - kalau ada, itu yang jadi acuan tambahan (sering menambah TP praktik yang tidak ada di CP nasional).
+
+## Output minimum
+
+Hasil minimum adalah peta CP -> kompetensi dan konten -> kandidat TP. Analisis lengkap hanya dibuat jika diminta atau diperlukan untuk ATP. Jangan membuat ATP, Prota, atau modul otomatis.
 
 ## Langkah
 1. Ambil template format resmi guru dulu (aturan universal #1 di `pa-core`).
@@ -33,6 +40,8 @@ description: "Use when a teacher asks to analyze an official Capaian Pembelajara
 - Kalau guru bilang "sepertinya saya sudah punya analisisnya" → tunggu dulu draft gurunya, sesuaikan, jangan paksa dokumen buatan sendiri.
 
 ## Verifikasi
-- Jumlah TP wajar untuk alokasi setahun (± 10-20 TP per fase-kelas; tanya guru).
+- Setiap TP memiliki kompetensi, konten, dan kata kerja yang dapat diamati.
+- Tidak ada TP yang hanya mengulang kalimat CP atau sekadar menyebut materi.
+- Jumlah TP wajar untuk alokasi yang disepakati; jangan memakai angka 10-20 sebagai standar nasional.
 - Semua elemen CP nasional terwakili di tabel.
 - PDF: header center, tabel tidak terpotong.

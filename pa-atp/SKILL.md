@@ -1,12 +1,19 @@
 ---
 name: pa-atp
 description: "Use when a teacher asks to create or revise an Alur Tujuan Pembelajaran from existing learning objectives. Check the source CP, phase, class, and school format first."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # ATP (Alur Tujuan Pembelajaran)
 
 ## Prasyarat
 - Hasil Analisis CP (`pa-analisis-cp`): daftar TP per elemen.
+
+## Output minimum
+
+ATP berisi TP yang diurutkan secara logis dan dapat ditelusuri ke CP. Materi, SOLO, dan dimensi Profil Lulusan hanya ditambahkan jika dibutuhkan format sekolah. Jangan menambahkan alokasi JP; itu diputuskan di Prota atau rencana pembelajaran.
 
 ## Langkah
 1. Template resmi guru dulu.
@@ -30,5 +37,7 @@ description: "Use when a teacher asks to create or revise an Alur Tujuan Pembela
 
 ## Verifikasi
 - Semua TP dari analisis CP ada & tidak ada duplikat.
+- Setiap TP punya alasan urutan atau prasyarat yang masuk akal.
+- Tidak ada TP yang hilang, tergandakan, atau ditambahkan tanpa sumber/keputusan guru.
 - SOLO naik secara wajar (tidak semua Extended Abstract di awal tahun).
 - PDF: tabel utuh, header center.

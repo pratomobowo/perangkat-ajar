@@ -1,12 +1,19 @@
 ---
 name: pa-kktp
 description: "Use when a teacher asks to define criteria for achieving learning objectives, including qualitative descriptors, score intervals, or mastery evidence. Confirm the school's assessment policy before drafting."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # KKTP (Kriteria Ketercapaian Tujuan Pembelajaran)
 
 ## Prasyarat
 - Daftar TP final (ATP/Prota).
+
+## Output minimum
+
+KKTP minimum menjelaskan bukti yang menunjukkan TP tercapai. Gunakan deskripsi kriteria, rubrik, atau interval sesuai kebijakan sekolah. Jangan mengubah KKTP menjadi satu angka batas secara otomatis.
 
 ## Langkah
 1. Template resmi guru dulu - format KKTP sangat bervariasi (ada yang pakai rubrik indikator, ada yang deskripsi interval). Kasus nyata: draf dibuat "indikator + bentuk asesmen", ternyata format resmi = deskripsi kualitatif → rework total.
@@ -33,4 +40,5 @@ Umumnya KKTP dibuat **setelah Prosem** (butuh daftar materi final per semester) 
 ## Verifikasi
 - Tiap TP punya tepat 4 deskripsi.
 - Rentang semua TP sama & menjumlah penuh 0-100.
+- Setiap kriteria dapat diamati atau dinilai dari bukti asesmen yang jelas.
 - PDF: kolom deskripsi tidak terpotong (tabel cukup lebar - pertimbangkan landscape jika 8+ kolom).

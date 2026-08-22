@@ -1,6 +1,9 @@
 ---
 name: pa-prota
 description: "Use when a teacher asks to map learning objectives across an academic year with effective weeks and lesson-hour allocations. Require the existing ATP and official school calendar before calculating."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # Prota (Program Tahunan)
@@ -8,6 +11,10 @@ description: "Use when a teacher asks to map learning objectives across an acade
 ## Prasyarat
 - ATP (`pa-atp`) + **kalender pendidikan resmi sekolah** (SK/edaran - biasanya lampiran SK pembagian tugas). Minggu efektif TIDAK BOLEH ditebak dari internet.
 - Dari kalender ambil: minggu efektif ganjil & genap, hari libur besar, jadwal asesmen (STS/SAS/pengolahan nilai).
+
+## Output minimum
+
+Prota hanya memetakan TP atau unit belajar, semester, dan alokasi waktu. Jangan membuat kalender sekolah atau menebak minggu efektif. Jika sekolah tidak meminta Prota, gunakan hasil pemetaan internal tanpa memaksa membuat PDF.
 
 ## Mengolah kalender pendidikan (pitfall terbukti)
 1. Ekstrak teks PDF kalender (halaman lampiran, sering bukan hal. 1): `import fitz; ''.join(p.get_text() for p in fitz.open(f))`.
@@ -34,6 +41,7 @@ description: "Use when a teacher asks to map learning objectives across an acade
 - `Σ alokasi per semester == ME_semester × jp_per_minggu` - hitung terprogram, bukan manual.
 - Setiap TP dari ATP muncul sekali, urutannya sama.
 - Alokasi kelipatan JP per minggu (tiap pertemuan utuh).
+- Tidak ada minggu libur atau agenda sekolah yang dihitung sebagai minggu pembelajaran tanpa konfirmasi.
 
 ## Pitfall
 - Minggu efektif genap biasanya lebih sedikit dari ganjil (libur akhir tahun ajaran) - kalau angkanya kebalikan, kemungkinan label tertukar (lihat atas).

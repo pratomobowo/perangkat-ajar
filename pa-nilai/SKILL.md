@@ -1,6 +1,9 @@
 ---
 name: pa-nilai
 description: "Use when a teacher asks to calculate, reconcile, summarize, or classify student scores, including final grades, mastery, remedial, enrichment, statistics, or an e-Rapor-ready ledger. Treat student data as sensitive."
+version: 1.4.0
+author: Hermes Agent
+license: MIT
 ---
 
 # Pengolahan Nilai → Ketuntasan → Leger
@@ -11,6 +14,8 @@ Hilir dari `pa-soal` (skor asesmen) dan jembatan menuju `pa-rapor` (deskripsi) &
 1. **Bobot komponen** - WAJIB dari kebijakan sekolah/profil (`~/.hermes/perangkat-ajar/profil.yaml`), contoh lazim: Tugas 30% · STS 30% · SAS 40%. Kalau profil kosong, tanya sekali lalu simpan ke profil.
 2. **Interval KKTP** - ambil dari dokumen `pa-kktp` guru (mis. A ≥ 90, B 80-89, C 70-79, D < 70; atau KKM/tuntas ≥ 70). Jangan mengarang angka.
 3. Sumber skor: ketik manual di chat · file CSV/Excel (baca pakai script di bawah atau pandas bila tersedia).
+
+Jika bobot, aturan pembulatan, atau cara menangani nilai kosong belum disetujui, berhenti dan tanyakan. Contoh angka di bagian lain bukan default kebijakan sekolah.
 
 ## Script cepat: `scripts/olah_nilai.py`
 ```bash
@@ -40,3 +45,11 @@ NIS | Nama | TP1 | TP2 | TP3 | NA | Predikat | Status | Tindak lanjut
 - Excel sering punya baris kosong/merged cells di atas header - bersihkan sebelum parse
 - Nilai rata-rata sederhana ≠ nilai akhir berbobot - pastikan bobot disetujui guru SEBELUM hitung massal
 - Data murid sensitif (aturan universal `pa-core`): jangan sebar rekap lengkap ke chat grup; kirim ke guru pribadi
+
+## Verifikasi output
+
+- Total bobot = 1 atau 100%.
+- Jumlah siswa input = jumlah siswa output, kecuali baris ditolak dan alasannya dicatat.
+- Nilai kosong tidak diubah menjadi nol tanpa keputusan guru.
+- Hasil perhitungan dapat direkonsiliasi dengan satu contoh manual.
+- Preview chat memakai masking identitas; file lengkap tetap lokal.
