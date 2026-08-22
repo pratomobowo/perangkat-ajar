@@ -1,6 +1,6 @@
 # Perangkat Ajar
 
-### Perangkat ajar yang lebih mudah disiapkan
+### Bantu guru menyiapkan pembelajaran, bukan sekadar dokumen
 
 Guru menghabiskan banyak waktu untuk menyusun dokumen, menghitung alokasi, memeriksa nilai, dan menyesuaikan format sekolah. Proyek ini membantu meringankan pekerjaan tersebut.
 
