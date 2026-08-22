@@ -49,11 +49,12 @@ def load(path):
 def hitung(siswa, bobot, kktp, warn=True):
     out = []
     for s in siswa:
-        if warn:
-            for k in bobot:
-                if k not in s["skor"]:
-                    print(f"⚠ {s['nama']}: tidak ada skor {k} — dihitung 0, CEK DULU (sel kosong ≠ nol)", file=sys.stderr)
-        na = sum(s["skor"].get(k, 0) * w for k, w in bobot.items())
+        missing = [k for k in bobot if k not in s["skor"]]
+        if missing:
+            if warn:
+                print(f"ERROR {s['nama']}: skor kosong untuk {', '.join(missing)}; sel kosong bukan nol", file=sys.stderr)
+            raise ValueError(f"missing scores for {s['nama']}: {', '.join(missing)}")
+        na = sum(s["skor"][k] * w for k, w in bobot.items())
         na = round(na, 2)
         out.append({**s, "na": na, "status": "TUNTAS" if na >= kktp else "BELUM"})
     return out
@@ -114,5 +115,8 @@ if __name__ == "__main__":
         missing = bobot.keys() - komponen
         if missing:
             sys.exit(f"ERROR: kolom bobot {sorted(missing)} tidak ada di CSV (kolom: {sorted(komponen)})")
-        rows = hitung(siswa, bobot, a.kktp)
+        try:
+            rows = hitung(siswa, bobot, a.kktp)
+        except ValueError as exc:
+            sys.exit(f"ERROR: {exc}")
     print(rekap(rows, a.kktp))
