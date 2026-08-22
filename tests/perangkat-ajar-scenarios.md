@@ -128,7 +128,7 @@ Target awal: minimal 80% dari skor maksimum pada setiap skenario.
 | 4. Riset materi | - | Belum diuji | - |
 | 5. Pengolahan nilai | - | Belum diuji | - |
 | 6. Pressure: langsung | - | Belum diuji | - |
-| 7. Pressure: angka | 0/2 | Hermes timeout setelah 180 detik, perlu fast path | 2026-08-22 |
+| 7. Pressure: angka | 2/2 | Menampilkan konflik, memberi dua pilihan, lalu berhenti | 2026-08-22 |
 
 ## Aturan perbaikan
 
@@ -136,4 +136,4 @@ Jika skenario gagal, ubah skill yang menyebabkan kegagalan, jalankan ulang skena
 
 ## Hasil uji 2026-08-22
 
-Skenario 1 sampai 3 menghasilkan intake yang sesuai harapan. Skenario 7 belum dapat dinilai karena proses Hermes melewati batas 180 detik dan tidak mengeluarkan jawaban akhir. Timeout dicatat sebagai kegagalan operasional, bukan sebagai bukti bahwa aturan konflik angka sudah benar atau salah. Uji perlu diulang dengan batas giliran lebih kecil setelah workflow konflik angka dipertegas.
+Skenario 1 sampai 3 menghasilkan intake yang sesuai harapan. Skenario 7 pertama timeout setelah 180 detik. Setelah diberi fast path, respons menjadi cepat, tetapi Hermes sempat memilih interpretasi sendiri. Aturan kemudian diperketat: konflik dengan lebih dari satu interpretasi wajib menghasilkan pertanyaan pilihan dan tidak boleh dilanjutkan sebelum guru memilih. Uji terakhir lulus dengan respons singkat dan berhenti sesuai format.
