@@ -25,6 +25,8 @@ Output minimum adalah deskripsi per siswa yang bersumber dari capaian TP dan for
    - Untuk TP belum tuntas → kalimat pembina, bukan label negatif: "perlu penguatan pada ..." / "sedang mengembangkan kemampuan ...", diikuti saran konkret.
 4. Output: tabel `No | Nama | Predikat | Deskripsi Rapor` + file teks per kelas siap tempel e-Rapor.
 
+Jika interval KKTP, rubrik, atau kebijakan predikat belum tersedia, jangan gunakan kata evaluatif seperti "baik", "sangat baik", "kuat", atau "unggul". Gunakan deskripsi netral berbasis data, lalu tandai status dan predikat sebagai belum ditetapkan.
+
 ## Verifikasi WAJIB (fatal kalau salah)
 1. **Nama ↔ deskripsi tidak tertukar** - cocokkan mapping NIS→nama→deskripsi dua kali; salah pasang nama = masalah serius ke ortu.
 2. Semua siswa punya deskripsi (jumlah baris = jumlah murid kelas).
