@@ -7,9 +7,9 @@ description: "Use when a teacher asks to calculate, reconcile, summarize, or cla
 
 Hilir dari `pa-soal` (skor asesmen) dan jembatan menuju `pa-rapor` (deskripsi) & leger. Skill ini = *tool* olah data, bukan generator dokumen.
 
-## LANGKAH 0 — Tentukan parameter
-1. **Bobot komponen** — WAJIB dari kebijakan sekolah/profil (`~/.hermes/perangkat-ajar/profil.yaml`), contoh lazim: Tugas 30% · STS 30% · SAS 40%. Kalau profil kosong, tanya sekali lalu simpan ke profil.
-2. **Interval KKTP** — ambil dari dokumen `pa-kktp` guru (mis. A ≥ 90, B 80–89, C 70–79, D < 70; atau KKM/tuntas ≥ 70). Jangan mengarang angka.
+## LANGKAH 0 - Tentukan parameter
+1. **Bobot komponen** - WAJIB dari kebijakan sekolah/profil (`~/.hermes/perangkat-ajar/profil.yaml`), contoh lazim: Tugas 30% · STS 30% · SAS 40%. Kalau profil kosong, tanya sekali lalu simpan ke profil.
+2. **Interval KKTP** - ambil dari dokumen `pa-kktp` guru (mis. A ≥ 90, B 80-89, C 70-79, D < 70; atau KKM/tuntas ≥ 70). Jangan mengarang angka.
 3. Sumber skor: ketik manual di chat · file CSV/Excel (baca pakai script di bawah atau pandas bila tersedia).
 
 ## Script cepat: `scripts/olah_nilai.py`
@@ -21,7 +21,7 @@ python3 olah_nilai.py nilai.csv --selftest   # cek integritas rumus
 ```
 
 ## Alur kerja
-1. **Validasi input dulu**: nama ganda/duplikat NIS, skor di luar rentang 0–100, kolom bobot ≠ kolom file → STOP dan tanya, JANGAN menebak (kesalahan nilai = komplain).
+1. **Validasi input dulu**: nama ganda/duplikat NIS, skor di luar rentang 0-100, kolom bobot ≠ kolom file → STOP dan tanya, JANGAN menebak (kesalahan nilai = komplain).
 2. Hitung NA tertimbang per murid; bulatkan sesuai kebiasaan sekolah (umumnya 0 desimal atau 2).
 3. Bandingkan dengan interval KKTP → status per TP (untuk rapor per-TP) dan per mapel (untuk leger).
 4. Statistik kelas: mean, min, max, distribusi predikat, % ketuntasan per TP.
@@ -37,6 +37,6 @@ NIS | Nama | TP1 | TP2 | TP3 | NA | Predikat | Status | Tindak lanjut
 
 ## Pitfall
 - Sel kosong ≠ nol: tanya dulu (belum dinilai? memang absen? remidi belum masuk?)
-- Excel sering punya baris kosong/merged cells di atas header — bersihkan sebelum parse
-- Nilai rata-rata sederhana ≠ nilai akhir berbobot — pastikan bobot disetujui guru SEBELUM hitung massal
+- Excel sering punya baris kosong/merged cells di atas header - bersihkan sebelum parse
+- Nilai rata-rata sederhana ≠ nilai akhir berbobot - pastikan bobot disetujui guru SEBELUM hitung massal
 - Data murid sensitif (aturan universal `pa-core`): jangan sebar rekap lengkap ke chat grup; kirim ke guru pribadi

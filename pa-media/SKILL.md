@@ -11,10 +11,10 @@ description: "Use when a teacher asks to turn approved learning content into tea
 ## 1. Materi Pembelajaran (bahan bacaan siswa/guru)
 Struktur ringkas per TP:
 - `# MATERI: <Topik>` + sub-judul identitas
-- **Pengertian/konteks** → **Konsep inti** (bullet, bukan wall of text) → **Contoh nyata** (studi kasus dari LKPD) → **Ringkasan** (5–7 poin)
+- **Pengertian/konteks** → **Konsep inti** (bullet, bukan wall of text) → **Contoh nyata** (studi kasus dari LKPD) → **Ringkasan** (5-7 poin)
 - Sintaks perintah/kode → block code; tabel perbandingan → markdown table
 - Referensi (buku/jurnal/dokumentasi resmi)
-Generate PDF via pipeline `pa-core`. Panjang wajar 3–8 halaman per TP — kalau lebih, pecah per pertemuan.
+Generate PDF via pipeline `pa-core`. Panjang wajar 3-8 halaman per TP - kalau lebih, pecah per pertemuan.
 
 ## 2. Slide Pembelajaran
 Konvensi slide kelas (teruji):
@@ -23,12 +23,12 @@ Konvensi slide kelas (teruji):
 - Kode/perintah pakai font monospace, ukuran ≥18pt; angka penting besar & berwarna
 - Footer konsisten: mapel · TP · halaman
 Implementasi (sesuai tooling tersedia):
-- **python-pptx** (`pip install python-pptx`): generate .pptx programatik dari outline MD — pilih saat guru butuh file PowerPoint asli.
-- **Handout PDF**: outline MD → pipeline PDF biasa — cukup untuk dicetak/dibagikan.
+- **python-pptx** (`pip install python-pptx`): generate .pptx programatik dari outline MD - pilih saat guru butuh file PowerPoint asli.
+- **Handout PDF**: outline MD → pipeline PDF biasa - cukup untuk dicetak/dibagikan.
 Minta template/logo sekolah dulu bila ada standar tampilan.
 
 ## 3. Bank Pertanyaan Interaktif (Quizizz/Kahoot/Wordwall)
-Nexie tidak memainkan platform eksternal — yang dibuat adalah **bank pertanyaannya**: tabel No | Pertanyaan | Opsi | Jawaban | Waktu | Penjelasan, siap import. Format import ikuti platform tujuan (tanya gurunya mau pakai apa).
+Nexie tidak memainkan platform eksternal - yang dibuat adalah **bank pertanyaannya**: tabel No | Pertanyaan | Opsi | Jawaban | Waktu | Penjelasan, siap import. Format import ikuti platform tujuan (tanya gurunya mau pakai apa).
 
 ## Pitfall
 - Jangan tempel teks panjang ke slide; itu tugas materi bacaan (#1), slide hanya kerangka bicara.

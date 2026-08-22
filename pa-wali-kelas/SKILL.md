@@ -9,7 +9,7 @@ Semua output simpan di folder output profil; data murid = sensitif (aturan #9 `p
 
 ## 1. Data Siswa Kelas
 Tabel identitas: No | Nama | NIS/NISN | JK | TTL | Orang Tua/Wali | Kontak | Alamat.
-- Sumber tunggal: daftar induk dari sekolah — jangan rekonstruksi dari chat.
+- Sumber tunggal: daftar induk dari sekolah - jangan rekonstruksi dari chat.
 - Kontak ortu hanya di dokumen ini, tidak dibawa ke dokumen lain.
 
 ## 2. Program Kerja Wali Kelas (per semester/tahun)
@@ -20,7 +20,7 @@ Tabel: No | Bidang (akademik/karakter/keterampilan/komunikasi ortu) | Kegiatan |
 Susunan pengurus + pembagian tugas; grid HTML bila pakai bagan.
 
 ## 4. Jadwal Piket
-Tabel hari × nama (grup piket); rotasi merata — hitung jumlah piket per anak sama.
+Tabel hari × nama (grup piket); rotasi merata - hitung jumlah piket per anak sama.
 
 ## 5. Denah Duduk
 HTML `<table>` grid posisi bangku (baris × kolom), tandai murid berkebutuhan khusus/penglihatan dengan catatan singkat.
@@ -37,5 +37,5 @@ Dari leger (`pa-admin`) + KKTP (`pa-kktp`): persentase tuntas per TP/mapel, daft
 - Diskusikan temuan di chat dengan kepala sekolah sebelum diformalkan.
 
 ## Pitfall
-- Jangan taruh nilai rinci murid di dokumen publik kelas (denah duduk, piket) — hanya administratif.
+- Jangan taruh nilai rinci murid di dokumen publik kelas (denah duduk, piket) - hanya administratif.
 - Analisis kenaikan mengikuti kriteria resmi dinas (KKM/batas tuntas sekolah), konfirmasi angkanya dulu.
