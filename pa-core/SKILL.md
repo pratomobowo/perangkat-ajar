@@ -1,16 +1,35 @@
 ---
 name: pa-core
-description: Orkestrator keluarga skill Perangkat Ajar untuk guru di Indonesia (Kurikulum Merdeka + Pembelajaran Mendalam) — intake profil guru/sekolah, peta alur dokumen hulu→hilir (Analisis CP → ATP → Prota → Prosem → KKTP → PPM/RPP/Modul Ajar → LKPD/Materi → Asesmen → Olah Nilai → Analisis Butir → Deskripsi Rapor; cabang P5 & PKL), aturan universal, routing ke sub-skill pa-*, dan pipeline PDF MD→HTML→PDF. Load skill ini saat guru baru minta perangkat ajar, saat profil belum ada, atau saat guru menyebut "perangkat ajar" secara umum.
+description: "Use when a teacher asks for perangkat ajar secara umum, belum memiliki profil atau format sekolah, atau perlu menentukan dokumen yang benar-benar dibutuhkan. Gunakan untuk intake, routing, konsistensi lintas dokumen, dan alur kerja sebelum drafting."
+version: 1.3.0
+author: Hermes Agent
+license: MIT
+metadata:
+  hermes:
+    tags: [guru, perangkat-ajar, kurikulum, pembelajaran]
+    related_skills: [pa-rpp, pa-atp, pa-soal, pa-nilai]
 ---
 
-# PA Core — Orkestrator Perangkat Ajar (Global)
+# PA Core: Alur Kerja Perangkat Ajar
 
-Keluarga skill `pa-*` membantu guru mana pun di Indonesia menyusun dokumen perangkat ajar Kurikulum Merdeka dan pendekatan **Pembelajaran Mendalam** (kebijakan nasional Kemendikdasmen), output Markdown + PDF rapi.
+Skill `pa-*` membantu guru menyusun perangkat ajar sesuai kebutuhan murid, sekolah, dan dokumen rujukan yang tersedia. Pembelajaran Mendalam adalah pendekatan yang dapat digunakan dalam perencanaan pembelajaran, bukan alasan untuk memaksakan satu format nasional.
+
+## Aturan utama: buat yang diperlukan saja
+
+Peta di bawah menunjukkan hubungan dokumen, bukan urutan wajib. Sebelum membuat apa pun:
+
+1. Tanyakan dokumen apa yang sudah dimiliki guru dan apa yang diminta sekolah.
+2. Cari tahu apakah guru ingin membuat dokumen baru, mengadaptasi, atau merevisi.
+3. Minta format resmi sekolah jika ada.
+4. Pilih output minimum yang cukup untuk kebutuhan tersebut.
+5. Jangan membuat paket lengkap secara otomatis.
+
+Jika sumber, angka, atau kebijakan belum tersedia, berhenti pada pertanyaan yang diperlukan. Jangan menebak dan jangan mengarang dokumen resmi.
 
 ## Peta alur dokumen (hulu → hilir)
 
 ```
-CP (Capaian Pembelajaran — dokumen resmi Kemendikdasmen per mapel & fase)
+CP (Capaian Pembelajaran - dokumen resmi Kemendikdasmen per mapel & fase)
  → Analisis CP   (pa-analisis-cp) : CP diurai menjadi TP per elemen
  → ATP           (pa-atp)         : TP diurutkan menjadi alur setahun
  → Prota         (pa-prota)       : ATP dipetakan ke minggu efektif setahun
@@ -26,22 +45,22 @@ Cabang opsional:
  → Riset Materi  (pa-riset)       : riset internet terverifikasi → bahan ajar per TP
  → P5            (pa-p5)          : modul projek, jurnal fasilitasi, rapor projek (6 dimensi PPP)
  → PKL/SMK       (pa-pkl)         : pedoman, jurnal siswa, instrumen penilaian DU/DI, konversi nilai
- → Admin harian  (pa-admin)       : jurnal, daftar hadir, leger — SESUAI KEBIJAKAN SEKOLAH
+ → Admin harian  (pa-admin)       : jurnal, daftar hadir, leger - SESUAI KEBIJAKAN SEKOLAH
  → Wali kelas    (pa-wali-kelas)  : modul role homeroom
 ```
 
-**Guru boleh mulai dari mana saja.** Selalu tanya: "Dokumen mana yang sudah Bapak/Ibu punya?" lalu lanjutkan dari situ. JANGAN paksa urutan hulu→hilir.
+**Guru boleh mulai dari mana saja.** Selalu tanya: "Dokumen mana yang sudah Bapak/Ibu punya dan dokumen apa yang diminta sekolah?" lalu lanjutkan dari situ. Jangan memaksa urutan hulu ke hilir.
 
-## LANGKAH 0 — Cek kebijakan sekolah dulu (baru!)
+## LANGKAH 0 - Cek kebijakan sekolah dulu (baru!)
 
 Sebelum menawarkan dokumen apa pun, pastikan bentuk yang diminta sekolah:
-- **Versi PP**: banyak sekolah sudah memakai versi SEDERHANA 3 komponen (tujuan pembelajaran, langkah/kegiatan, asesmen) sesuai arah penyederhanaan Kemendikdasmen; ada juga yang masih minta format lengkap. Minta contoh dokumen sekolah.
-- **Jurnal harian & administrasi**: tidak lagi wajib secara nasional, tapi beberapa sekolah/dinas tetap memintanya — jangan buat manual kalau sekolah sudah pakai aplikasi (e-Rapor/sistem sekolah).
+- **Rencana pembelajaran**: sekolah dapat meminta format ringkas, PPM, Modul Ajar, RPP, atau istilah lokal. Minta contoh dokumen sekolah.
+- **Jurnal harian dan administrasi**: kebutuhannya bergantung pada kebijakan sekolah, dinas, dan aplikasi yang digunakan. Jangan membuatnya sebelum diminta.
 - **Format rapor**: kalau sekolah pakai e-Rapor, hasil `pa-rapor` tinggal ditempel ke kolom deskripsi.
 
 Tanya sekali saat intake, simpan jawabannya di profil.
 
-## LANGKAH 1 — Intake profil (sekali saja per guru)
+## LANGKAH 1: Intake profil (sekali saja per guru)
 
 Pastikan `~/.hermes/perangkat-ajar/profil.yaml` ada. Kalau belum, tanya santai (sisipkan di percakapan):
 
@@ -49,13 +68,21 @@ Pastikan `~/.hermes/perangkat-ajar/profil.yaml` ada. Kalau belum, tanya santai (
 2. Mapel + fase/kelas yang diampu (bisa lebih dari satu)
 3. JP per minggu + berapa menit per JP (umumnya 40 atau 45)
 4. Tahun pelajaran
-5. Minggu efektif ganjil & genap — **WAJIB dari kalender pendidikan resmi sekolah**, minta file/linknya. Jangan menebak dari internet.
+5. Minggu efektif ganjil & genap - **WAJIB dari kalender pendidikan resmi sekolah**, minta file/linknya. Jangan menebak dari internet.
 6. Dokumen mana yang sudah ada dan mana yang mau dibuat duluan
 7. (opsional) Kebiasaan tambahan: istilah lokal dokumen (mis. RPM), kebijakan interval KKTP, komposisi soal
 
 Simpan ke `~/.hermes/perangkat-ajar/profil.yaml` (salin `templates/profil.yaml`). Sesi berikutnya jangan tanya ulang.
 
 ## Routing
+
+Muat hanya skill yang diperlukan. Batas fungsi penting:
+
+- `pa-riset` hanya mencari dan memverifikasi sumber.
+- `pa-media` mengubah materi yang sudah disetujui menjadi bahan ajar atau slide.
+- `pa-lkpd` membuat aktivitas dan lembar kerja.
+- `pa-rpp` menyusun rencana pembelajaran, bukan melakukan riset umum.
+- `pa-soal` menyusun instrumen asesmen dan analisis butir.
 
 | Guru menyebut | Load skill |
 |---|---|
@@ -76,7 +103,7 @@ Simpan ke `~/.hermes/perangkat-ajar/profil.yaml` (salin `templates/profil.yaml`)
 | jurnal mengajar, daftar hadir, leger | `pa-admin` |
 | wali kelas, homeroom, denah duduk, buku kasus | `pa-wali-kelas` |
 
-## Aturan universal (berlaku di semua sub-skill)
+## Aturan universal
 
 1. **Template resmi guru DULU sebelum menulis draf.** Hampir semua sekolah punya format resmi (sering Google Docs). Download dulu, ikuti persis.
    ```bash
@@ -86,18 +113,20 @@ Simpan ke `~/.hermes/perangkat-ajar/profil.yaml` (salin `templates/profil.yaml`)
    curl -sL "https://docs.google.com/uc?export=download&id=${FILE_ID}&confirm=t" -o file.pdf
    ```
    Output HTML / redirect ke `accounts.google.com` = file privat → minta guru ubah sharing atau kirim file langsung. Jangan bypass.
-2. **Diskusikan dulu di chat, baru tulis dokumen.** Keputusan berdampak (komposisi soal, interval KKTP, alokasi JP, kebijakan remedial): sajikan usulan, tunggu persetujuan, baru generate. Yang belum final ditandai `> Catatan (sementara — dibedah bersama)`.
-3. **Dokumen resmi = satu-satunya sumber angka.** Minggu efektif, libur, jadwal STS/SAS dari kalender resmi. Verifikasi label dengan MENJUMLAHKAN per bulan — label Ganjil/Genap sering tertukar.
+2. **Diskusikan dulu di chat, baru tulis dokumen.** Keputusan berdampak seperti komposisi soal, interval KKTP, alokasi JP, dan remedial harus disetujui guru sebelum generate. Yang belum final ditandai `> Catatan (sementara: perlu dikonfirmasi)`.
+3. **Dokumen resmi = satu-satunya sumber angka.** Minggu efektif, libur, jadwal STS/SAS dari kalender resmi. Verifikasi label dengan MENJUMLAHKAN per bulan - label Ganjil/Genap sering tertukar.
 4. **Konsistensi angka lintas dokumen.** JP per TP di Prota = pertemuan di Prosem = alokasi di RPP. `pertemuan = JP ÷ jp_per_minggu`, `total menit = JP × menit_per_JP`. Kalau guru bilang angka "salah", HITUNG dulu sebelum mengubah.
 5. **MD = single source of truth.** Revisi = edit MD → regenerate. Versi lama pindah ke `Arsip/`, jangan dihapus.
 6. **Verifikasi PDF terprogram** (pymupdf), bukan dengan mata: jumlah halaman, keyword, tidak ada halaman sepi (<300 chars body), TTD utuh 1 halaman, header center. Normalisasi teks dulu: `re.sub(r'\s+', ' ', text)`.
 7. **Komposisi & kebijakan penilaian milik guru.** Konfirmasi angka dulu; angka komposisi harus menjumlah 100%.
 8. **Jangan mengarang konten resmi.** CP, studi kasus, rubrik resmi: minta dokumennya. Belum ada? Placeholder + catat "resmi menyusul".
-9. **Data pribadi murid sensitif** (nilai, absen, kasus, deskripsi rapor): simpan lokal di folder output, jangan dikirim ke grup/chat lain tanpa diminta guru pemiliknya.
+9. **Data pribadi murid sensitif** (nilai, absen, kasus, deskripsi rapor): simpan lokal di folder output. Masking nama dan NIS pada preview chat. Jangan mengirim CSV atau PDF lengkap ke channel umum tanpa persetujuan guru.
+
+10. **Dependensi dan file pendukung harus dicek.** Sebelum menjalankan script, pastikan file ada dan dependensinya tersedia. Jika tidak tersedia, laporkan verifikasi sebagai belum dijalankan. Jangan mengarang pengganti.
 
 ## Prinsip pengembangan keluarga skill ini
 - Keluarga `pa-*` HANYA ditambah/direvisi setelah **breakdown kebutuhan nyata**: riset lapangan & kebijakan dulu (baseline: `references/konteks-kebijakan-2026.md`), sajikan breakdown di chat, tunggu persetujuan pemilik, baru bangun. Kasus nyata: v1.0 dibangun langsung dari pengalaman satu mapel tanpa riset kebutuhan → revisi besar jadi v1.1 (13 skill) setelah riset.
-- **Pemilik sering menyempitkan scope setelah lihat usulan** — hormati penyempitan itu dan catat batch yang ditunda/ditolak secara eksplisit; jangan dibangun tanpa persetujuan ulang. Kasus nyata (Agu-2026): dari usulan 3 tier, pemilik menunda otomasi (cron/vision/webhook) DAN administrasi dinas (surat/PAK/LPJ), memilih keluarga dokumen pembelajaran "RPP dan kawan-kawan" → jadi v1.2 (16 skill).
+- **Pemilik sering menyempitkan scope setelah lihat usulan** - hormati penyempitan itu dan catat batch yang ditunda/ditolak secara eksplisit; jangan dibangun tanpa persetujuan ulang. Kasus nyata (Agu-2026): dari usulan 3 tier, pemilik menunda otomasi (cron/vision/webhook) DAN administrasi dinas (surat/PAK/LPJ), memilih keluarga dokumen pembelajaran "RPP dan kawan-kawan" → jadi v1.2 (16 skill).
 - Referensi konteks kebijakan nasional (framework Pembelajaran Mendalam, penyederhanaan administrasi, TKA, rumus analisis butir): `references/konteks-kebijakan-2026.md`.
 
 ## Pipeline PDF (MD → HTML → PDF)
@@ -105,12 +134,12 @@ Simpan ke `~/.hermes/perangkat-ajar/profil.yaml` (salin `templates/profil.yaml`)
 Script: `scripts/gen_pdf_from_md.py`. Dependensi: `pip install markdown-it-py weasyprint`.
 
 ```bash
-python3 gen_pdf_from_md.py input.md output.pdf "HEADER — Nama Sekolah | Topik"          # portrait
+python3 gen_pdf_from_md.py input.md output.pdf "HEADER - Nama Sekolah | Topik"          # portrait
 python3 gen_pdf_from_md.py input.md output.pdf "HEADER" landscape                       # tabel lebar
 ```
 
 Aturan MD (data saja, tanpa styling):
-- Baris pertama BUKAN teks header — header dari CSS `@top-center`; sub-judul pakai `<p class="sub">`.
+- Baris pertama BUKAN teks header - header dari CSS `@top-center`; sub-judul pakai `<p class="sub">`.
 - Numbering vertikal, tidak inline (di sel tabel pakai `<br>`).
 - Tabel biasa = markdown table; tabel sangat lebar WAJIB HTML `<table>` + argumen `landscape`.
 - Halaman terpisah (kunci jawaban): `<div class="pagebreak"></div>`.

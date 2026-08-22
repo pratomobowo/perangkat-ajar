@@ -1,6 +1,6 @@
 ---
 name: pa-p5
-description: Dokumen P5 (Projek Penguatan Profil Pelajar Pancasila) — modul projek (informasi umum + komponen inti), jurnal fasilitasi, lembar refleksi, dan rapor projek per dimensi-elemen dengan 4 kategori capaian. WAJIB ambil template/panduan resmi sekolah dulu.
+description: "Use when a teacher asks for a P5 project document, project module, facilitator journal, reflection sheet, or project report. Check whether the school uses P5 terminology or a newer cocurricular format."
 ---
 
 # P5 — Projek Penguatan Profil Pelajar Pancasila

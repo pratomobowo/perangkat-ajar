@@ -1,6 +1,6 @@
 ---
 name: pa-rapor
-description: Membuat deskripsi capaian kompetensi (kalimat rapor) per siswa secara massal dari KKTP + daftar nilai per TP — pain point terbesar guru tiap akhir semester. Termasuk pola kalimat sesuai predikat, verifikasi nama tidak tertukar, dan format siap tempel e-Rapor.
+description: "Use when a teacher asks to generate or review student report descriptions from criteria and scores. Verify student identity and keep the output private."
 ---
 
 # Deskripsi Capaian Kompetensi (Kalimat Rapor)

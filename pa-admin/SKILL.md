@@ -1,6 +1,6 @@
 ---
 name: pa-admin
-description: Administrasi mengajar harian — jurnal mengajar, daftar hadir, leger nilai per kelas. OPSIONAL sesuai kebijakan sekolah (tidak lagi wajib nasional); jangan buat manual dobel kalau sekolah sudah pakai aplikasi e-Rapor/sistem sekolah.
+description: "Use when a teacher asks for a teaching journal, attendance list, class ledger, or other routine classroom administration. Check the school's policy and existing application before creating duplicate documents."
 ---
 
 # Admin Mengajar Harian

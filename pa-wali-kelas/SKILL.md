@@ -1,6 +1,6 @@
 ---
 name: pa-wali-kelas
-description: Modul role WALI KELAS/homeroom — data siswa kelas, program kerja wali kelas, struktur organisasi, jadwal piket, denah duduk, buku kasus pembinaan, analisis ketuntasan/kenaikan kelas. Dokumen sensitif; simpan lokal.
+description: "Use when a homeroom teacher asks for a class program, seating plan, attendance or case record, class analysis, or other wali kelas document. Treat all student and case data as sensitive and keep it local."
 ---
 
 # Wali Kelas (Homeroom Module)

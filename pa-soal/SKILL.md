@@ -1,6 +1,6 @@
 ---
 name: pa-soal
-description: Membuat instrumen penilaian — asesmen diagnostik awal, latihan soal per TP (PG A-D), kisi-kisi + naskah soal SAS (Sumatif Akhir Semester), mode soal gaya TKA literasi-numerasi, program remedial & pengayaan, dan analisis butir soal pasca-ujian (tingkat kesukaran, daya beda, efektivitas pengecoh via scripts/analisis_butir.py). Termasuk konvensi komposisi tingkat kesulitan, kunci jawaban halaman terpisah, distribusi kunci A-D seimbang, verifikasi otomatis scripts/verify_soal.py.
+description: "Use when a teacher asks for diagnostic tests, practice questions, blueprints, SAS instruments, TKA-style items, remedial or enrichment assessments, or post-test item analysis. Confirm assessment rules before drafting."
 ---
 
 # Soal & Asesmen (Latihan · Kisi-kisi · SAS · Remedial)

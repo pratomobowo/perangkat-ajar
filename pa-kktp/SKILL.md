@@ -1,6 +1,6 @@
 ---
 name: pa-kktp
-description: Membuat dokumen KKTP (Kriteria Ketercapaian Tujuan Pembelajaran) — deskripsi kualitatif interval nilai per TP (Perlu Bimbingan/Cukup/Baik/Sangat Baik) sebagai acuan asesmen & ketuntasan. Biasanya disusun setelah Prosem.
+description: "Use when a teacher asks to define criteria for achieving learning objectives, including qualitative descriptors, score intervals, or mastery evidence. Confirm the school's assessment policy before drafting."
 ---
 
 # KKTP (Kriteria Ketercapaian Tujuan Pembelajaran)

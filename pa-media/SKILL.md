@@ -1,6 +1,6 @@
 ---
 name: pa-media
-description: Membuat bahan ajar — materi pembelajaran per TP (ringkasan terstruktur, MD+PDF) dan slide/deck pembelajaran (PPTX via python-pptx atau handout PDF). Termasuk konvensi slide yang enak dibaca di kelas (1 konsep, ≤6 bullet, kode monospace).
+description: "Use when a teacher asks to turn approved learning content into teaching materials, slides, a handout, or classroom presentation. Do not use this skill for web research or worksheet design."
 ---
 
 # Materi Ajar & Media Belajar

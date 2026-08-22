@@ -1,6 +1,6 @@
 ---
 name: pa-prota
-description: Membuat dokumen Prota (Program Tahunan) — memetakan ATP ke minggu efektif satu tahun ajaran beserta alokasi JP per TP per semester. Input dari pa-atp + kalender pendidikan resmi sekolah; output jadi input Prosem.
+description: "Use when a teacher asks to map learning objectives across an academic year with effective weeks and lesson-hour allocations. Require the existing ATP and official school calendar before calculating."
 ---
 
 # Prota (Program Tahunan)

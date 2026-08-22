@@ -1,6 +1,6 @@
 ---
 name: pa-atp
-description: Membuat dokumen ATP (Alur Tujuan Pembelajaran) — mengurutkan TP hasil analisis CP menjadi rangkaian setahun beserta taksonomi SOLO, materi pokok, dan dimensi profil lulusan. Input dari pa-analisis-cp; output jadi input Prota.
+description: "Use when a teacher asks to create or revise an Alur Tujuan Pembelajaran from existing learning objectives. Check the source CP, phase, class, and school format first."
 ---
 
 # ATP (Alur Tujuan Pembelajaran)

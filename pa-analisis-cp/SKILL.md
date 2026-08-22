@@ -1,6 +1,6 @@
 ---
 name: pa-analisis-cp
-description: Membuat dokumen Analisis Capaian Pembelajaran (CP) — mengurai CP resmi Kemendikdasmen menjadi Tujuan Pembelajaran (TP) per elemen, termasuk CP hasil sinkronisasi industri/DUDI untuk SMK. Dokumen paling hulu dalam keluarga perangkat ajar; output jadi input ATP.
+description: "Use when a teacher asks to analyze an official Capaian Pembelajaran and derive learning objectives per element or phase. Require the source CP before drafting."
 ---
 
 # Analisis CP

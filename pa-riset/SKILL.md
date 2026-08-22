@@ -1,6 +1,6 @@
 ---
 name: pa-riset
-description: Riset internet untuk guru — cari materi/referensi dari web, verifikasi multi-sumber (prioritas resmi Kemendikdasmen/dokumentasi resmi), lalu tuangkan jadi bahan ajar per TP yang nyambung ke pa-media (materi/slide), pa-lkpd (studi kasus), dan pa-soal (konteks soal).
+description: "Use when a teacher asks to find and verify web sources for a topic, learning objective, teaching material, case, or assessment context. Return sourced research for another skill to transform."
 ---
 
 # Riset Materi → Bahan Ajar

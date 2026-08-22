@@ -1,6 +1,6 @@
 ---
 name: pa-lkpd
-description: Membuat LKPD (Lembar Kerja Peserta Didik) — studi kasus, materi singkat, soal praktik, rubrik penilaian skor 100, kriteria penguasaan A/B/C/D, panduan pengumpulan. LKPD juga menjadi SUMBER ISI untuk RPP/modul ajar.
+description: "Use when a teacher asks to create or revise a student worksheet, activity sheet, practical case, or its assessment rubric. Use approved content and keep the worksheet separate from the lesson plan."
 ---
 
 # LKPD (Lembar Kerja Peserta Didik)

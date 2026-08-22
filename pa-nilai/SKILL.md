@@ -1,6 +1,6 @@
 ---
 name: pa-nilai
-description: Pengolahan nilai guru — input skor per TP/komponen (ketikan, CSV, atau Excel), hitung nilai akhir tertimbang, bandingkan dengan interval KKTP (tuntas/belum), statistik kelas, mapping remedial & pengayaan, rekap leger siap e-Rapor. Feed langsung ke pa-rapor.
+description: "Use when a teacher asks to calculate, reconcile, summarize, or classify student scores, including final grades, mastery, remedial, enrichment, statistics, or an e-Rapor-ready ledger. Treat student data as sensitive."
 ---
 
 # Pengolahan Nilai → Ketuntasan → Leger

@@ -1,6 +1,6 @@
 ---
 name: pa-pkl
-description: Dokumen PKL/Prakerin SMK (Praktik Kerja Lapangan) — pedoman pelaksanaan, jurnal harian siswa, catatan kunjungan pembimbing, instrumen penilaian DU/DI & pembimbing sekolah, dan rekap konversi nilai PKL. Fokus dokumen sisi pembelajaran; surat-menyurat resmi di luar skill ini.
+description: "Use when an SMK teacher asks for a PKL or Prakerin learning document, student journal, supervisor instrument, DU/DI assessment, or grade conversion. Exclude official correspondence unless separately requested."
 ---
 
 # PKL — Praktik Kerja Lapangan (SMK)

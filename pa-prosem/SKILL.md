@@ -1,6 +1,6 @@
 ---
 name: pa-prosem
-description: Membuat dokumen Prosem (Program Semestre) — matriks distribusi materi per minggu/bulan dalam satu semester, lengkap baris kegiatan sekolah (MPLS/STS/SAS/RAPORT). Input dari pa-prota + kalender pendidikan. WAJIB PDF landscape untuk matriks lebar.
+description: "Use when a teacher asks to distribute learning objectives or topics across weeks and months in one semester. Require the annual plan and official school calendar before calculating the matrix."
 ---
 
 # Prosem (Program Semestre)
