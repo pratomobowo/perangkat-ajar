@@ -1,35 +1,55 @@
-# Perangkat Ajar — Skill AI untuk Guru Indonesia
+# Perangkat Ajar
 
-Keluarga skill Hermes yang dirancang untuk membantu guru menyusun, memeriksa, dan mengembangkan perangkat ajar secara lebih cepat, konsisten, dan tetap mengikuti konteks sekolah masing-masing.
+### Skill AI untuk membantu guru menyiapkan pembelajaran yang lebih bermakna
 
-Proyek ini lahir dari kebutuhan nyata guru: bukan sekadar menghasilkan dokumen, tetapi membantu menerjemahkan capaian pembelajaran menjadi perangkat ajar yang runtut — dari analisis CP sampai asesmen, pengolahan nilai, dan deskripsi rapor.
+`perangkat-ajar` adalah keluarga skill untuk Hermes Agent yang membantu guru Indonesia menyusun, mengembangkan, dan memeriksa perangkat ajar—dari analisis Capaian Pembelajaran hingga asesmen, pengolahan nilai, dan deskripsi rapor.
 
-> **Tujuan utama:** membantu guru mengurangi beban administratif agar lebih banyak waktu dapat digunakan untuk merancang pengalaman belajar yang bermakna bagi murid.
+Proyek ini dibuat untuk satu tujuan sederhana: **mengurangi pekerjaan administratif tanpa mengurangi peran profesional guru.**
 
-## Prinsip proyek
+AI membantu merapikan alur, menghitung, memeriksa konsistensi, dan menyiapkan draf. Guru tetap menentukan tujuan, strategi, penilaian, dan keputusan yang sesuai dengan murid serta kebijakan sekolah.
 
-- **Guru tetap pengambil keputusan.** AI membantu menyusun dan memeriksa, bukan menggantikan pertimbangan profesional guru.
-- **Konteks sekolah lebih penting daripada template generik.** Format resmi sekolah, kalender pendidikan, dan kebijakan satuan pendidikan menjadi rujukan utama.
-- **Dari hulu ke hilir, tetapi fleksibel.** Guru dapat memulai dari dokumen yang belum tersedia tanpa dipaksa mengikuti urutan tertentu.
-- **Angka dan konsistensi dapat diverifikasi.** Alokasi JP, minggu efektif, komposisi asesmen, dan output PDF diperiksa dengan bantuan skrip.
-- **Privasi murid dijaga.** Data nilai, kasus, kehadiran, dan informasi pribadi diproses secara hati-hati dan tidak dibagikan tanpa persetujuan.
+## Mengapa proyek ini dibuat?
 
-## Siapa yang dapat menggunakan?
+Menyusun perangkat ajar sering berarti menghubungkan banyak dokumen, angka, dan keputusan:
 
-- Guru SD, SMP, SMA, dan SMK di Indonesia
-- Wali kelas dan koordinator projek
-- Tim kurikulum atau komunitas belajar guru
-- Pengembang asisten AI pendidikan berbasis Hermes Agent
+- Capaian Pembelajaran perlu diterjemahkan menjadi tujuan dan alur belajar.
+- Alokasi waktu harus selaras dengan minggu efektif dan kalender sekolah.
+- Rencana pembelajaran perlu terhubung dengan LKPD, materi, dan asesmen.
+- Nilai harus diolah secara konsisten dan dapat dijelaskan.
+- Format akhir harus mengikuti kebutuhan satuan pendidikan.
 
-## Status
+Keluarga skill ini membantu menghubungkan pekerjaan tersebut dalam satu alur yang fleksibel—tanpa memaksa semua guru memakai format yang sama.
 
-**Versi:** 1.2 · **Status:** usable untuk pengembangan dan uji lapangan
+## Prinsip utama
 
-Keluarga skill ini terus dikembangkan berdasarkan kebutuhan guru, perubahan kebijakan pendidikan, dan masukan dari penggunaan nyata. Kontribusi berupa contoh format sekolah, koreksi alur, dan laporan masalah sangat disambut.
+- **Guru memegang kendali.** AI menyusun dan memeriksa; guru mengambil keputusan.
+- **Konteks sekolah menjadi rujukan.** Format resmi, kalender pendidikan, dan kebijakan sekolah didahulukan daripada template generik.
+- **Mulai dari kebutuhan nyata.** Guru dapat membuat ATP, modul ajar, soal, atau dokumen lain tanpa harus memulai dari awal.
+- **Konsistensi dapat diverifikasi.** Alokasi JP, komposisi soal, nomor jawaban, dan hasil PDF dibantu pemeriksa otomatis.
+- **Data murid diperlakukan sebagai data sensitif.** Nilai, kehadiran, dan catatan kasus tetap berada dalam kendali guru atau sekolah.
+- **Markdown menjadi sumber utama.** Revisi dilakukan pada dokumen sumber, lalu output dapat dibuat ulang.
 
-## Yang dibantu
+## Cakupan skill
 
-Keluarga skill Hermes untuk membantu guru mana pun di Indonesia menyusun dokumen perangkat ajar Kurikulum Merdeka, **dari hulu ke hilir**, output Markdown + PDF rapi.
+| Skill | Kegunaan |
+| --- | --- |
+| `pa-core` | Intake profil, orkestrasi alur, aturan universal, dan pipeline PDF |
+| `pa-analisis-cp` | Mengurai CP menjadi tujuan pembelajaran per elemen |
+| `pa-atp` | Menyusun Alur Tujuan Pembelajaran |
+| `pa-prota` | Memetakan tujuan dan alokasi JP dalam Program Tahunan |
+| `pa-prosem` | Menyusun Program Semester berdasarkan minggu efektif |
+| `pa-kktp` | Menyusun Kriteria Ketercapaian Tujuan Pembelajaran |
+| `pa-rpp` | Membuat RPP, Modul Ajar, atau format lokal sekolah |
+| `pa-lkpd` | Menyusun LKPD berbasis aktivitas dan rubrik |
+| `pa-media` | Membuat materi ajar, slide, dan pertanyaan interaktif |
+| `pa-soal` | Membuat asesmen, kisi-kisi, SAS, remedial, pengayaan, dan analisis butir |
+| `pa-nilai` | Mengolah nilai, statistik kelas, ketuntasan, dan leger |
+| `pa-rapor` | Menghasilkan deskripsi capaian kompetensi siswa |
+| `pa-p5` | Menyusun modul projek, jurnal fasilitasi, dan rapor projek |
+| `pa-pkl` | Menyusun perangkat PKL/Prakerin SMK dan instrumen penilaian |
+| `pa-riset` | Mengkurasi sumber internet menjadi bahan ajar terverifikasi |
+| `pa-admin` | Membantu jurnal mengajar, daftar hadir, dan administrasi pilihan |
+| `pa-wali-kelas` | Membantu proker, denah duduk, buku kasus, dan analisis kelas |
 
 ## Isi paket
 
