@@ -149,7 +149,8 @@ Contoh: `4 JP per minggu`, `3 pertemuan`, dan `180 menit total` belum menentukan
 ## Prinsip pengembangan keluarga skill ini
 - Keluarga `pa-*` HANYA ditambah/direvisi setelah **breakdown kebutuhan nyata**: riset lapangan & kebijakan dulu (baseline: `references/konteks-kebijakan-2026.md`), sajikan breakdown di chat, tunggu persetujuan pemilik, baru bangun. Kasus nyata: v1.0 dibangun langsung dari pengalaman satu mapel tanpa riset kebutuhan → revisi besar jadi v1.1 (13 skill) setelah riset.
 - **Pemilik sering menyempitkan scope setelah lihat usulan** - hormati penyempitan itu dan catat batch yang ditunda/ditolak secara eksplisit; jangan dibangun tanpa persetujuan ulang. Kasus nyata (Agu-2026): dari usulan 3 tier, pemilik menunda otomasi (cron/vision/webhook) DAN administrasi dinas (surat/PAK/LPJ), memilih keluarga dokumen pembelajaran "RPP dan kawan-kawan" → jadi v1.2 (16 skill).
-- Referensi konteks kebijakan nasional (framework Pembelajaran Mendalam, penyederhanaan administrasi, TKA, rumus analisis butir): `references/konteks-kebijakan-2026.md`.
+- Referensi kebijakan: `references/konteks-kebijakan-2026.md`.
+- Baseline hulu ke hilir, input/output, gate verifikasi, dan gap: `references/baseline-hulu-hilir.md`.
 
 ## Pipeline PDF (MD → HTML → PDF)
 
