@@ -98,4 +98,4 @@ Verifikasi: jalankan `hermes` lalu cek `skills_list` memuat skill `pa-*`.
 - **Template dulu**: dokumen mengikuti format resmi sekolah masing-masing, bukan format bawaan skill.
 - **Terprogram**: setiap dokumen diverifikasi otomatis (pymupdf + `verify_soal.py`) — bukan dicek dengan mata.
 
-Diturunkan dari praktik nyata penyusunan perangkat ajar Basis Data SMKN 7 Baleendah (2026/2027).
+Dikembangkan dari kebutuhan nyata guru dan terus disempurnakan melalui penggunaan serta masukan komunitas.
