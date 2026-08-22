@@ -128,7 +128,7 @@ Target awal: minimal 80% dari skor maksimum pada setiap skenario.
 | 4. Riset materi | - | Belum diuji | - |
 | 5. Pengolahan nilai | - | Belum diuji | - |
 | 6. Pressure: langsung | - | Belum diuji | - |
-| 7. Pressure: angka | 0/2 | Hermes timeout setelah 180 detik | 2026-08-22 |
+| 7. Pressure: angka | 0/2 | Hermes timeout setelah 180 detik, perlu fast path | 2026-08-22 |
 
 ## Aturan perbaikan
 

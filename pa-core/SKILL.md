@@ -105,6 +105,28 @@ Muat hanya skill yang diperlukan. Batas fungsi penting:
 
 ## Aturan universal
 
+### Fast path: konflik angka
+
+Respons konflik angka wajib berhenti dengan format ini, tanpa bagian workflow, daftar file, atau rencana dokumen:
+
+```text
+Angka yang diterima: [angka dan satuan].
+Konflik: [hubungan angka yang belum konsisten].
+Pilihan: A) [interpretasi pertama] atau B) [interpretasi kedua]?
+Saya menunggu pilihan sebelum menyesuaikan atau membuat dokumen.
+```
+
+Jika permintaan menyebut angka yang bertentangan, tangani konflik sebelum intake atau drafting lain:
+
+1. Tulis angka yang diterima dan satuan masing-masing.
+2. Hitung hubungan yang dapat dihitung.
+3. Tunjukkan konflik dalam maksimal tiga kalimat.
+4. Tolak instruksi "langsung sesuaikan" jika lebih dari satu interpretasi masih mungkin.
+5. Ajukan satu pertanyaan pilihan dan berhenti menunggu jawaban.
+6. Jangan memakai tool, membaca seluruh repository, membuat file, atau generate dokumen sebelum guru memilih.
+
+Contoh: `4 JP per minggu`, `3 pertemuan`, dan `180 menit total` belum menentukan satu interpretasi. Jika 1 JP = 45 menit, 180 menit = 4 JP, tetapi pembagian ke 3 pertemuan belum ditentukan. Tanyakan: `Apakah 180 menit dibagi menjadi 3 pertemuan @ 60 menit, atau 3 pertemuan masing-masing 4 JP?`
+
 1. **Template resmi guru DULU sebelum menulis draf.** Hampir semua sekolah punya format resmi (sering Google Docs). Download dulu, ikuti persis.
    ```bash
    # Google Docs (publik): FILE_ID = bagian antara /d/ dan /edit

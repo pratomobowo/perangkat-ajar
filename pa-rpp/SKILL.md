@@ -94,6 +94,18 @@ Informasi Umum (kompetensi awal, dimensi profil/pelajar, sarana) → Komponen In
 Identitas → KD/IPK → TP → indikator → langkah pembelajaran → penilaian.
 
 ## Aturan angka
+
+Jika angka dari guru bertentangan, berhenti sebelum menyusun modul:
+
+Respons wajib berisi angka, konflik, dua pilihan, dan kalimat `Saya menunggu pilihan sebelum menyesuaikan atau membuat dokumen.` Jangan memilih interpretasi sendiri.
+
+1. Nyatakan angka dan satuannya.
+2. Hitung total menit berdasarkan `JP x menit_per_JP`.
+3. Tampilkan konflik secara singkat.
+4. Minta guru memilih koreksi. Jika lebih dari satu interpretasi mungkin, jangan memilih sendiri walaupun guru meminta "langsung sesuaikan".
+
+Jangan diam-diam mengubah jumlah pertemuan, JP, atau durasi. Jangan membuat draf sampai konflik selesai.
+
 - **Alokasi waktu wajib tulis jumlah pertemuan**: `4 x 45 menit (180 menit), 1 pertemuan`; `pertemuan = JP ÷ jp_per_minggu`.
 - Verifikasi `Σ menit tahap == JP × menit_per_JP`. Jika guru mengatakan angkanya salah, hitung dulu sebelum mengubah.
 - Konsisten dengan Prota/Prosem (audit silang aturan #4 `pa-core`).
