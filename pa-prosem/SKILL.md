@@ -1,7 +1,7 @@
 ---
 name: pa-prosem
 description: "Use when a teacher asks to distribute learning objectives or topics across weeks and months in one semester. Require the annual plan and official school calendar before calculating the matrix."
-version: 1.4.0
+version: 1.5.0
 author: Hermes Agent
 license: MIT
 ---
@@ -53,3 +53,15 @@ assert all(b in text for b in ["Juli","Agustus","September","Oktober","November"
 - Menambah kolom baru → update SEMUA `colspan`.
 - Warna sel paling andal via inline `style="background:..."`.
 - Halaman kosong setelah tabel besar → jangan pasang `page-break-inside: avoid` pada tabel sangat panjang.
+- Generator skrip menimpa ulang MD dari nol — status dokumen & revisi manual HARUS ikut diurus di dalam skrip, bukan diedit langsung di MD (akan hilang saat regenerate).
+
+## Konvensi hasil praktik (SMK, disetujui sementara guru 2026-10-07)
+
+Prosem Basis Data Fase F ([Nama Guru], NIP [NIP]):
+- Satu dokumen, 3 semester efektif @1 halaman landscape: XI Ganjil (19 ME: Jul 3, Agu 4, Sep 5, Okt 4, Nov 3), XI Genap (17 ME: Jan 3, Feb 3, Mar 2, Apr 4, Mei 4, Jun 1), XII Ganjil (19 ME, struktur bulan sama dengan XI ganjil).
+- Bulan asesmen (Desember/Juni, ME kecil/nol) tetap diberi kolom kegiatan non-efektif (SAS, Remedial, Porseni, Rapor) agar baris Kegiatan lengkap; sel JP TP dikosongkan di kolom tsb.
+- Tiap TP dialokasikan ke minggu efektif berurutan @4 JP/minggu (TP 2 JP berbagi minggu); kolom Pert. Ke- = nomor minggu (rentang bila >1 minggu, mis. "6–8"), dinomori ulang per semester.
+- Baris Kegiatan: MPLS, Tes Kompetensi, Ujian Praktek, SAS, Rapor, libur — posisi perkiraan dari kalender, selalu minta guru cek ulang tanggal aktual.
+- Audit silang terprogram: Σ sel JP per baris TP == alokasi Prota untuk semua TP.
+- Status: `DRAF` sampai disetujui; persetujuan bisa bersifat sementara ("format dapat disesuaikan kemudian") — catat itu di status line dan memori.
+- Blok tanda tangan rata kanan + NIP (format di `pa-core`); kecilkan font tabel via `extra_css` bila kolom sangat banyak.

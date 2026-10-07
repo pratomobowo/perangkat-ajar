@@ -1,7 +1,7 @@
 ---
 name: pa-prota
 description: "Use when a teacher asks to map learning objectives across an academic year with effective weeks and lesson-hour allocations. Require the existing ATP and official school calendar before calculating."
-version: 1.4.0
+version: 1.5.0
 author: Hermes Agent
 license: MIT
 ---
@@ -46,3 +46,14 @@ Prota hanya memetakan TP atau unit belajar, semester, dan alokasi waktu. Jangan 
 ## Pitfall
 - Minggu efektif genap biasanya lebih sedikit dari ganjil (libur akhir tahun ajaran) - kalau angkanya kebalikan, kemungkinan label tertukar (lihat atas).
 - Jangan lupa baris total; banyak format resmi mensyaratkannya.
+- Revisi alokasi JP guru sering membuat total meleset dari target - hitung ulang terprogram setiap revisi; selisihnya sesuaikan ke TP yang materinya paling ringan/berat sesuai arahan guru, lalu laporkan transparan agar guru bisa veto.
+
+## Konvensi hasil praktik (SMK, disetujui guru 2026-10-06)
+
+Prota Basis Data Fase F ([Nama Guru], NIP [NIP]):
+- Satu dokumen Fase F (Kelas XI–XII), 3 semester efektif: XI Ganjil 76 JP (19 ME × 4), XI Genap 68 JP (17 ME × 4), XII Ganjil 76 JP (19 ME × 4); XII Genap = PKL (tanpa alokasi, cukup catatan).
+- Alokasi JP per TP disepakati bersama guru (usulan proporsional → guru merevisi manual). Alokasi akhir: No 1,2,4,9,10 = 2 JP; No 3,11,12,13,17,18,25,26 = 2–4 JP; No 7 (normalisasi) & No 16 (SELECT) = 12 JP; No 22 (subquery), No 38,42 (bangun API) = 8–12 JP; sisanya 4–8 JP sesuai bobot.
+- Tabel: No | Bab/ATP (kode + nama elemen) | Tujuan Pembelajaran (`n.m` + teks TP) | Materi | Alokasi Waktu | Semester; tiap semester diakhiri baris **"Jumlah Total Alokasi Waktu"** yang dicocokkan terprogram dengan ME × JP/minggu.
+- Header: Satuan Pendidikan, Mapel, Kelas/Fase, Tahun Pelajaran (via 2 baris `<p class="sub">`).
+- Status: `DRAF` sampai disetujui guru, lalu `Disetujui — disetujui guru pada <tanggal>; dapat digunakan sebagai acuan Prosem`, regenerate PDF.
+- Blok tanda tangan rata kanan + NIP (format di `pa-core`); ruang TTD basah ±55px.

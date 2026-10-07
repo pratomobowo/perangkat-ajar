@@ -1,7 +1,7 @@
 ---
 name: pa-analisis-cp
 description: "Use when a teacher asks to analyze an official Capaian Pembelajaran and derive learning objectives per element or phase. Require the source CP before drafting."
-version: 1.4.0
+version: 1.5.0
 author: Hermes Agent
 license: MIT
 ---
@@ -38,6 +38,19 @@ Hasil minimum adalah peta CP -> kompetensi dan konten -> kandidat TP. Analisis l
 - TP harus **terukur** (ada kata kerja operasional + objek + konteks), bukan restatement materi.
 - Urutan TP sebaiknya mengikuti **alur logika nyata bidang ilmunya** (mis. konsep → rancang → bangun → operasikan → kelola), bukan sekadar urutan teks CP - diskusikan dengan guru.
 - Kalau guru bilang "sepertinya saya sudah punya analisisnya" → tunggu dulu draft gurunya, sesuaikan, jangan paksa dokumen buatan sendiri.
+
+## Konvensi hasil praktik (SMK, disetujui guru 2026-10-06)
+
+Format dokumen Analisis CP yang sudah disetujui untuk mapel Basis Data Fase F ([Nama Guru], NIP [NIP]):
+- Judul "ANALISIS CAPAIAN PEMBELAJARAN (CP)"; baris identitas: **Mata Pelajaran:** X | **Fase:** Y (Kelas ...) | **Konsentrasi Keahlian:** Z | [Nama Sekolah].
+- Paragraf dasar penyusunan TP YYYY/YYYY menyebut CP RPL (Kemendikdasmen), sinkronisasi industri ([mitra DUDI], 2 Juli 2026), dan pemetaan Fase F.
+- Bagian CP NASIONAL dan CP HASIL SINKRONISASI (Basis Data & Layanan Web — API Provider) dalam tanda kutip.
+- Tabel pemetaan: No | Kode | Elemen / Sub-Elemen | Kelas | Tujuan Pembelajaran (TP); kode `BD-F.n`; TP bernomor `n.m` diawali "Peserta didik mampu ..."; elemen terakhir = proyek PjBL Sistem Peminjaman Alat.
+- Tabel CATATAN ANALISIS (KKO Bloom, konten utama, konteks, dimensi, keterkaitan mapel: Basis Data = API Provider; Web & Mobile = API Consumer; PBTGM = Automated Testing).
+- Urutan elemen mengikuti kesepakatan guru, bukan urutan teks CP: konsep & struktur → **perancangan** (ERD, normalisasi, tipe data & indexing) → instalasi & administrasi → DDL → DML → SQL tingkat lanjut → DCL & keamanan → function/procedure/trigger → backup/restore/replikasi → (XII) migrasi & seeding → RESTful API & autentikasi → proyek PjBL.
+- Status di akhir dokumen: `DRAF — menunggu persetujuan guru` sampai disetujui; setelah disetujui ubah menjadi `Disetujui — disetujui guru pada <tanggal>; dapat digunakan sebagai acuan ATP/Prota/Prosem`, lalu regenerate PDF.
+- Blok tanda tangan rata kanan (format di `pa-core`, bagian TTD) dengan nama guru + NIP di bawahnya.
+- Penukaran posisi elemen = tukar baris tabel **beserta kode dan nomor TP**, dan sinkronkan urutan di tabel CATATAN ANALISIS (konten utama).
 
 ## Verifikasi
 - Setiap TP memiliki kompetensi, konten, dan kata kerja yang dapat diamati.

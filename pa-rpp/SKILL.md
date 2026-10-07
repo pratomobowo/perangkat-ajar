@@ -86,6 +86,7 @@ Tiap tahap berlabel prinsip yang disentuh: *mindful / meaningful / joyful*. Alok
 **D. Asesmen**: awal (diagnostik), proses (formatif), akhir (sumatif) + tindak lanjut remedial-pengayaan (rujuk `pa-soal`).
 
 **TTD**: blok `kotak-ttd` dua kolom (Kepala Sekolah | Guru) + NIP bila diberikan.
+- Konvensi guru (SMK): kolom Penyusun pada tabel Identitas cukup nama tanpa NIP; NIP guru tetap tercantum di blok TTD. Kepala Sekolah: [Nama Kepala Sekolah] — NIP. [NIP].
 
 ## Fallback: Modul Ajar Kurikulum Merdeka
 Informasi Umum (kompetensi awal, dimensi profil/pelajar, sarana) → Komponen Inti (TP, pemahaman bermakna, pertanyaan pemantik, kegiatan AWAL-INTI-PENUTUP, asesmen, pengayaan-remedial, refleksi) → Lampiran (LKPD via `pa-lkpd`, bahan bacaan, glosarium, pustaka).

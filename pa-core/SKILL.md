@@ -201,7 +201,9 @@ Contoh: `4 JP per minggu`, `3 pertemuan`, dan `180 menit total` belum menentukan
 
 ## Pipeline PDF (MD → HTML → PDF)
 
-Script: `scripts/gen_pdf_from_md.py`. Dependensi: `pip install markdown-it-py weasyprint`.
+Script: `scripts/gen_pdf_from_md.py`. Dependensi: `pip install markdown-it-py weasyprint` (`--break-system-packages` bila perlu).
+
+> Catatan 2026-10-06: instalasi pip sistem hilang setelah VM diganti — sebelum generate, selalu cek `python3 -c "import weasyprint, markdown_it"`, install ulang bila `ModuleNotFoundError`.
 
 ```bash
 python3 gen_pdf_from_md.py input.md output.pdf "HEADER - Nama Sekolah | Topik"          # portrait
@@ -214,6 +216,25 @@ Aturan MD (data saja, tanpa styling):
 - Tabel biasa = markdown table; tabel sangat lebar WAJIB HTML `<table>` + argumen `landscape`.
 - Halaman terpisah (kunci jawaban): `<div class="pagebreak"></div>`.
 - TTD: `<div class="kotak-ttd"><table>...` (spacer ≤10mm).
+  - Varian rata kanan (dokumen formal, e.g. Analisis CP SMK):
+    ```html
+    <div class="kotak-ttd">
+    <table>
+    <tr>
+    <td style="width: 55%;"></td>
+    <td style="text-align: right; width: 45%;">
+    [Kota], ..........<br>
+    Guru Mata Pelajaran,<br><br>
+    <div style="height: 60px;"></div>
+    [Nama Guru]<br>
+    NIP. [NIP]
+    </td>
+    </tr>
+    </table>
+    </div>
+    ```
+    Ganti nama kota, tanggal, dan NIP sesuai guru. Tahun boleh dihilangkan dari isian tanggal.
+  - TTD harus tetap menempel di akhir dokumen (satu halaman dengan konten terakhir): bila blok TTD tersenggol ke halaman sepi sendiri, kecilkan spacer (mis. 80px → 60px) sampai verifikasi "tidak ada halaman sepi" lulus.
 
 ## Konvensi file
 
