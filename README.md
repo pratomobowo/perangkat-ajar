@@ -1,3 +1,5 @@
+![Perangkat Ajar](assets/banner.png)
+
 # Perangkat Ajar
 
 **Kumpulan skill AI gratis untuk guru Indonesia menyusun perangkat pembelajaran, dari Capaian Pembelajaran sampai rapor.**
