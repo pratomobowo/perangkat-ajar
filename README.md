@@ -2,7 +2,7 @@
 
 # Perangkat Ajar
 
-**Kumpulan skill AI gratis untuk guru Indonesia menyusun perangkat pembelajaran, dari Capaian Pembelajaran sampai rapor.**
+**Skill AI open source yang kami rancang dan bangun khusus untuk guru Indonesia, dari Capaian Pembelajaran sampai rapor.**
 
 ![Gratis untuk Guru Indonesia](https://img.shields.io/badge/Gratis-untuk%20Guru%20Indonesia-brightgreen)
 ![Lisensi](https://img.shields.io/badge/Lisensi-MIT-blue)
@@ -22,7 +22,9 @@ Kami percaya teknologi seharusnya meringankan, bukan menambah beban. Makanya pro
 
 ## Apa Ini?
 
-`perangkat-ajar` adalah kumpulan skill AI open source yang membantu guru menyusun perangkat pembelajaran secara runtut: analisis Capaian Pembelajaran, Alur Tujuan Pembelajaran, program tahunan dan semester, modul ajar, LKPD, soal dan asesmen, pengolahan nilai, sampai deskripsi rapor.
+`perangkat-ajar` adalah paket skill AI open source yang kami rancang dan bangun sendiri dari nol, khusus untuk kebutuhan guru di Indonesia. Isinya 17 skill yang mengikuti alur kerja guru secara runtut: analisis Capaian Pembelajaran, Alur Tujuan Pembelajaran, program tahunan dan semester, modul ajar, LKPD, soal dan asesmen, pengolahan nilai, sampai deskripsi rapor.
+
+Setiap skill kami tulis berdasarkan alur administrasi guru yang sebenarnya. Ini bukan template generik, dan bukan kumpulan skill buatan orang lain.
 
 AI membantu membuat draf, merapikan alur, menghitung, dan memeriksa konsistensi. Keputusan tetap di tangan guru: tujuan, strategi, penilaian, dan penyesuaian dengan murid serta kebijakan sekolah.
 
@@ -66,7 +68,7 @@ Kontribusi sangat terbuka: perbaikan skill, template format sekolah baru, dokume
 
 ## Kredit
 
-- **Ide dan inisiator:** Pratomo Bowo Leksono
+- **Dikonsep dan dibangun oleh:** Pratomo Bowo Leksono
 - **Kontributor:** Bagus Abdul Karim, pembaruan skill dan penyusun alur administrasi guru
 
 Dikembangkan dari kebutuhan nyata guru dan terus disempurnakan lewat pemakaian serta masukan komunitas.
