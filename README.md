@@ -1,6 +1,6 @@
 # Perangkat Ajar
 
-**Asisten AI gratis untuk guru Indonesia menyusun perangkat pembelajaran, dari Capaian Pembelajaran sampai rapor.**
+**Kumpulan skill AI gratis untuk guru Indonesia menyusun perangkat pembelajaran, dari Capaian Pembelajaran sampai rapor.**
 
 ![Gratis untuk Guru Indonesia](https://img.shields.io/badge/Gratis-untuk%20Guru%20Indonesia-brightgreen)
 ![Lisensi](https://img.shields.io/badge/Lisensi-MIT-blue)
