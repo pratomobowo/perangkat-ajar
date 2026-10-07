@@ -1,103 +1,74 @@
 # Perangkat Ajar
 
-### Bantu guru menyiapkan pembelajaran, bukan sekadar dokumen
+**Asisten AI gratis untuk guru Indonesia menyusun perangkat pembelajaran, dari Capaian Pembelajaran sampai rapor.**
 
-Guru menghabiskan banyak waktu untuk menyusun dokumen, menghitung alokasi, memeriksa nilai, dan menyesuaikan format sekolah. Proyek ini membantu meringankan pekerjaan tersebut.
+![Gratis untuk Guru Indonesia](https://img.shields.io/badge/Gratis-untuk%20Guru%20Indonesia-brightgreen)
+![Lisensi](https://img.shields.io/badge/Lisensi-MIT-blue)
 
-`perangkat-ajar` menyediakan alat bantu untuk menyusun perangkat ajar secara lebih teratur, mulai dari Capaian Pembelajaran, tujuan pembelajaran, dan rencana pembelajaran hingga asesmen, pengolahan nilai, dan deskripsi rapor.
+## Keresahan Kami
 
-Tujuannya sederhana: **mengurangi beban administratif agar guru dapat lebih fokus pada proses belajar murid.**
+Jam 11 malam, laptop masih menyala. Besok pagi modul ajar harus sudah jadi, minggu depan supervisi, leger nilai belum kelar. Sementara mengajar di kelas tetap jalan setiap hari.
 
-AI membantu membuat draf, merapikan alur, menghitung, dan memeriksa konsistensi. Guru tetap menentukan tujuan, strategi, penilaian, dan keputusan yang sesuai dengan murid serta kebijakan sekolah.
+Ini bukan cerita satu guru. Ini cerita hampir semua guru di Indonesia:
 
-## Mengapa proyek ini dibuat?
+- Administrasi pembelajaran menumpuk: ATP, modul ajar, LKPD, soal, analisis nilai, deskripsi rapor.
+- Setiap dokumen saling berkaitan, tapi dikerjakan terpisah dan rawan tidak konsisten.
+- Setiap sekolah punya format dan kebijakan sendiri, template generik sering tidak kepakai.
+- Waktu yang habis untuk dokumen adalah waktu yang hilang dari murid.
 
-Menyusun perangkat ajar sering berarti menghubungkan banyak dokumen, angka, dan keputusan:
+Kami percaya teknologi seharusnya meringankan, bukan menambah beban. Makanya proyek ini dibuat: gratis, terbuka, dan dibangun dari kebutuhan nyata guru.
 
-- Capaian Pembelajaran perlu diterjemahkan menjadi tujuan dan alur belajar.
-- Alokasi waktu harus selaras dengan minggu efektif dan kalender sekolah.
-- Rencana pembelajaran perlu terhubung dengan LKPD, materi, dan asesmen.
-- Nilai harus diolah secara konsisten dan dapat dijelaskan.
-- Format akhir harus mengikuti kebutuhan satuan pendidikan.
+## Apa Ini?
 
-Proyek ini membantu menghubungkan pekerjaan tersebut dalam satu alur yang fleksibel. Setiap sekolah tetap dapat menggunakan format dan kebijakannya sendiri.
+`perangkat-ajar` adalah kumpulan skill AI open source yang membantu guru menyusun perangkat pembelajaran secara runtut: analisis Capaian Pembelajaran, Alur Tujuan Pembelajaran, program tahunan dan semester, modul ajar, LKPD, soal dan asesmen, pengolahan nilai, sampai deskripsi rapor.
 
-## Prinsip utama
+AI membantu membuat draf, merapikan alur, menghitung, dan memeriksa konsistensi. Keputusan tetap di tangan guru: tujuan, strategi, penilaian, dan penyesuaian dengan murid serta kebijakan sekolah.
 
-- **Guru memegang kendali.** AI menyusun dan memeriksa. Guru mengambil keputusan.
-- **Konteks sekolah menjadi rujukan.** Format resmi, kalender pendidikan, dan kebijakan sekolah didahulukan daripada template generik.
-- **Mulai dari kebutuhan nyata.** Guru dapat membuat ATP, modul ajar, soal, atau dokumen lain tanpa harus memulai dari awal.
-- **Konsistensi dapat diverifikasi.** Alokasi JP, komposisi soal, nomor jawaban, dan hasil PDF dibantu pemeriksa otomatis.
-- **Data murid diperlakukan sebagai data sensitif.** Nilai, kehadiran, dan catatan kasus tetap berada dalam kendali guru atau sekolah.
-- **Markdown menjadi sumber utama.** Revisi dilakukan pada dokumen sumber, lalu output dapat dibuat ulang.
+## Gratis, Untuk Guru Indonesia
 
-## Cakupan skill
+Proyek ini dikerjakan secara gratis untuk guru-guru di Indonesia. Tidak ada biaya, tidak ada paywall. Kalau ini membantu pekerjaanmu, bantu sebarkan ke rekan guru yang lain.
 
-| Skill | Kegunaan |
-| --- | --- |
-| `pa-core` | Intake profil, orkestrasi alur, aturan universal, dan pipeline PDF |
-| `pa-analisis-cp` | Mengurai CP menjadi tujuan pembelajaran per elemen |
-| `pa-atp` | Menyusun Alur Tujuan Pembelajaran |
-| `pa-prota` | Memetakan tujuan dan alokasi JP dalam Program Tahunan |
-| `pa-prosem` | Menyusun Program Semester berdasarkan minggu efektif |
-| `pa-kktp` | Menyusun Kriteria Ketercapaian Tujuan Pembelajaran |
-| `pa-rpp` | Membuat RPP, Modul Ajar, atau format lokal sekolah |
-| `pa-lkpd` | Menyusun LKPD berbasis aktivitas dan rubrik |
-| `pa-media` | Membuat materi ajar, slide, dan pertanyaan interaktif |
-| `pa-soal` | Membuat asesmen, kisi-kisi, SAS, remedial, pengayaan, dan analisis butir |
-| `pa-nilai` | Mengolah nilai, statistik kelas, ketuntasan, dan leger |
-| `pa-rapor` | Menghasilkan deskripsi capaian kompetensi siswa |
-| `pa-p5` | Menyusun modul projek, jurnal fasilitasi, dan rapor projek |
-| `pa-pkl` | Menyusun perangkat PKL/Prakerin SMK dan instrumen penilaian |
-| `pa-riset` | Mengkurasi sumber internet menjadi bahan ajar terverifikasi |
-| `pa-admin` | Membantu jurnal mengajar, daftar hadir, dan administrasi pilihan |
-| `pa-wali-kelas` | Membantu proker, denah duduk, buku kasus, dan analisis kelas |
+## Fitur Utama
 
-## Isi paket
+- 17 skill mencakup alur hulu sampai hilir: CP, ATP, Prota, Prosem, KKTP, RPP/Modul Ajar, LKPD, media ajar, soal dan asesmen, pengolahan nilai, rapor, P5, PKL, riset bahan ajar, administrasi, sampai modul wali kelas.
+- Mengikuti format resmi sekolah masing-masing, bukan memaksa template bawaan.
+- Pemeriksaan otomatis: alokasi JP, komposisi soal, kunci jawaban, sampai hasil PDF.
+- Markdown sebagai sumber utama: revisi cukup edit file sumber, lalu generate ulang.
+- Data murid diperlakukan sebagai data sensitif dan tetap dalam kendali guru.
 
-| Skill | Dokumen |
-|---|---|
-| `pa-core` | Orkestrator: intake profil guru, peta alur, aturan universal, pipeline PDF |
-| `pa-analisis-cp` | Analisis Capaian Pembelajaran (CP → TP per elemen) |
-| `pa-atp` | Alur Tujuan Pembelajaran (taksonomi SOLO + dimensi profil lulusan) |
-| `pa-prota` | Program Tahunan (alokasi JP per TP vs minggu efektif) |
-| `pa-prosem` | Program Semestre (matriks minggu × bulan, landscape) |
-| `pa-kktp` | Kriteria Ketercapaian TP (deskripsi interval) |
-| `pa-rpp` | RPP / Modul Ajar / varian lokal sekolah |
-| `pa-lkpd` | Lembar Kerja Peserta Didik (kasus, rubrik 100, kriteria A-D) |
-| `pa-soal` | Asesmen lengkap: diagnostik, latihan soal, kisi-kisi + naskah SAS, mode TKA, remedial & pengayaan, analisis butir soal |
-| `pa-rapor` | Deskripsi capaian kompetensi (kalimat rapor) massal dari KKTP + nilai |
-| `pa-nilai` | Pengolahan nilai: NA tertimbang vs KKTP, statistik kelas, remedial/pengayaan, leger (script `olah_nilai.py`) |
-| `pa-p5` | P5: modul projek, jurnal fasilitasi, refleksi, rapor projek 6 dimensi Profil Pelajar Pancasila |
-| `pa-pkl` | PKL/Prakerin SMK: pedoman, jurnal siswa, instrumen penilaian DU/DI & pembimbing, konversi nilai |
-| `pa-media` | Materi ajar per TP + slide pembelajaran + bank pertanyaan interaktif |
-| `pa-riset` | Riset internet → bahan ajar terverifikasi multi-sumber (prioritas resmi), feed ke materi/LKPD/soal |
-| `pa-admin` | Jurnal mengajar, daftar hadir, leger nilai (opsional per kebijakan sekolah) |
-| `pa-wali-kelas` | Modul homeroom: data siswa, proker, denah duduk, buku kasus, analisis kenaikan |
-
-## Instalasi
+## Mulai Cepat
 
 ```bash
-# salin folder ini ke direktori skills Hermes kamu
-cp -r perangkat-ajar ~/.hermes/skills/
+# salin folder skill yang kamu butuhkan ke direktori skills
+# di asisten AI yang kamu gunakan
+cp -r perangkat-ajar/pa-* <direktori-skills-asisten-AI>/
 
 # dependensi pipeline PDF (sekali saja)
 pip install markdown-it-py weasyprint
 ```
 
-Verifikasi: jalankan `hermes` lalu cek `skills_list` memuat skill `pa-*`.
+1. Bilang ke asisten AI: *"Bantu aku bikin perangkat ajar"* untuk intake profil (nama, sekolah, mapel, JP per minggu, tahun pelajaran, minggu efektif). Profil ini disimpan sekali di awal.
+2. Sebutkan dokumen yang mau dibuat: *"Bikin ATP"*, *"Susun prosem"*, *"Buatkan modul ajar TP1"*.
+3. Semua dokumen tersimpan sebagai `.md` + `.pdf` di folder output. Revisi cukup edit `.md` lalu generate ulang.
 
-## Mulai cepat
+## Prinsip
 
-1. Bilang ke agent-mu: *"Bantu aku bikin perangkat ajar"* → agent melakukan intake profil (nama, sekolah, mapel, JP/minggu, tahun pelajaran, minggu efektif dari kalender resmi) dan menyimpannya di `~/.hermes/perangkat-ajar/profil.yaml`.
-2. Sebutkan dokumen mana yang mau dibuat - mulai dari mana saja (guru sering sudah punya sebagian): *"Bikin ATP"* / *"Susun prosem"* / *"Buatkan modul ajar TP1"*.
-3. Semua dokumen tersimpan `.md` + `.pdf` di `~/.hermes/perangkat-ajar/output/<paket>/`; revisi cukup edit `.md` lalu minta regenerate.
+- **Guru memegang kendali.** AI menyusun dan memeriksa, guru yang memutuskan.
+- **Konteks sekolah jadi rujukan.** Format resmi dan kalender pendidikan didahulukan.
+- **Mulai dari kebutuhan nyata.** Boleh masuk di titik mana pun, tidak harus dari awal.
+- **Konsistensi bisa diverifikasi.** Bukan sekadar dicek dengan mata.
 
-## Filosofi desain
+## Berkontribusi
 
-- **Hulu → hilir**: CP dianalisis → ATP → Prota → Prosem → KKTP → RPP/Modul Ajar → LKPD → Soal/Asesmen. Guru boleh masuk di titik mana pun.
-- **Data ≠ proses**: semua data spesifik guru/sekolah hidup di `profil.yaml` + dokumen sumber guru; skill hanya berisi proses. Satu keluarga skill melayani semua guru.
-- **Template dulu**: dokumen mengikuti format resmi sekolah masing-masing, bukan format bawaan skill.
-- **Terprogram**: setiap dokumen diverifikasi otomatis (pymupdf + `verify_soal.py`) - bukan dicek dengan mata.
+Kontribusi sangat terbuka: perbaikan skill, template format sekolah baru, dokumentasi, atau laporan bug. Silakan buka issue atau kirim pull request.
 
-Dikembangkan dari kebutuhan nyata guru dan terus disempurnakan melalui penggunaan serta masukan komunitas.
+## Kredit
+
+- **Ide dan inisiator:** Pratomo Bowo Leksono
+- **Kontributor:** Pak Bagus, pembaruan skill dan penyusun alur administrasi guru
+
+Dikembangkan dari kebutuhan nyata guru dan terus disempurnakan lewat pemakaian serta masukan komunitas.
+
+## Lisensi
+
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
