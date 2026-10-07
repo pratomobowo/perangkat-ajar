@@ -65,7 +65,7 @@ Kontribusi sangat terbuka: perbaikan skill, template format sekolah baru, dokume
 ## Kredit
 
 - **Ide dan inisiator:** Pratomo Bowo Leksono
-- **Kontributor:** Pak Bagus, pembaruan skill dan penyusun alur administrasi guru
+- **Kontributor:** Bagus Abdul Karim, pembaruan skill dan penyusun alur administrasi guru
 
 Dikembangkan dari kebutuhan nyata guru dan terus disempurnakan lewat pemakaian serta masukan komunitas.
 
